@@ -1,0 +1,42 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Developer:
+    - Github:
+        - icon: si-github
+          href: https://github.com/mferrie
+    - GitLab:
+        - icon: si-gitlab
+          href: https://gitlab.com/mferrie
+    - Stack Overflow:
+        - icon: si-stackoverflow
+          href: https://stackoverflow.com/users/6827554/matt-ferrie
+
+- Social:
+    - Reddit:
+        - icon: si-reddit
+          href: https://www.reddit.com/user/ferriematthew/
+    - Facebook:
+        - icon: si-facebook
+          href: https://www.facebook.com/ferriematthew/
+    - Mastodon:
+        - icon: si-mastodon
+          href: https://mastodon.social/deck/@ferriematthew
+    - BlueSky:
+        - icon: si-bluesky
+          href: https://bsky.app/profile/ferriematthew.bsky.social
+    - Threads:
+        - icon: si-threads
+          href: https://threads.com/@ferriematthew
+    - Stoat:
+        - abbr: S
+          href: https://stoat.chat/
+
+- Entertainment:
+    - YouTube:
+        - icon: si-youtube
+          href: https://www.youtube.com/@KaizenOramara
+    - Twitch:
+        - icon: si-twitch
+          href: https://www.twitch.tv/kaizen_oramara97

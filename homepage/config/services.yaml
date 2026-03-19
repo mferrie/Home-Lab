@@ -1,0 +1,34 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+- Self-Hosted:
+    - PiHole:
+        icon: si-pihole
+        href: http://192.168.0.64:8080/admin/
+        description: DNS Sinkhole
+    - Uptime Kuma:
+        icon: si-uptimekuma
+        href: http://192.168.0.64:3001/
+        description: Uptime Monitor
+    - ForgeJo:
+        icon: sh-forgejo-light
+        href: http://192.168.0.128:3000/
+        description: Git Server
+    - Immich:
+        icon: sh-immich-light
+        href: http://192.168.0.128:2283/
+        description: Photo Storage
+    - Mealie:
+        icon: sh-mealie-light
+        href: http://192.168.0.128:9925/
+        description: Recipe Storage
+    - OpenCloud:
+        icon: sh-opencloud-light
+        href: https://mafmanhomelab-cloud.duckdns.org/
+        description: File Server
+
+- Third-Party:
+    - TailScale:
+        icon: sh-tailscale-light
+        href: https://tailscale.com/admin/machines
+        description: Overlay Mesh VPN

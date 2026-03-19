@@ -1,0 +1,865 @@
+[2026-03-09T16:05:47.981Z] info: kubernetes.yaml was copied to the config folder
+[2026-03-09T16:12:29.160Z] info: docker.yaml was copied to the config folder
+[2026-03-09T16:12:29.163Z] info: services.yaml was copied to the config folder
+[2026-03-09T16:12:29.165Z] info: bookmarks.yaml was copied to the config folder
+[2026-03-09T16:12:29.169Z] info: proxmox.yaml was copied to the config folder
+[2026-03-09T16:12:29.290Z] info: widgets.yaml was copied to the config folder
+[2026-03-09T16:12:29.293Z] info: custom.css was copied to the config folder
+[2026-03-09T16:12:29.294Z] info: custom.js was copied to the config folder
+[2026-03-09T16:23:25.582Z] error: undefined
+[2026-03-09T16:23:25.596Z] error: undefined
+[2026-03-09T16:23:25.624Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:23:25.654Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:23:29.524Z] error: undefined
+[2026-03-09T16:23:29.528Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:23:29.556Z] error: undefined
+[2026-03-09T16:23:57.880Z] error: undefined
+[2026-03-09T16:23:57.890Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:23:57.900Z] error: undefined
+[2026-03-09T16:23:57.906Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:23:57.919Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:24:11.292Z] error: undefined
+[2026-03-09T16:24:11.297Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:24:11.307Z] error: undefined
+[2026-03-09T16:24:11.310Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:24:11.322Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:24:14.370Z] error: undefined
+[2026-03-09T16:24:14.375Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:24:14.406Z] error: undefined
+[2026-03-09T16:26:26.361Z] error: undefined
+[2026-03-09T16:26:26.372Z] error: undefined
+[2026-03-09T16:26:26.377Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T16:26:26.395Z] error: TypeError: Invalid URL
+    at new URL (node:internal/url:827:25)
+    at l (/app/.next/server/pages/index.js:1:14605)
+    at Wc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:68:44)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:70:253)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:89)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at bd (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:77:404)
+    at Z (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:76:217)
+    at $c (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:78:98)
+    at Zc (/app/node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom-server.browser.production.min.js:71:145)
+[2026-03-09T17:48:39.060Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:39.063Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:39.064Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:48:42.003Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:42.005Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:42.006Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:48:45.055Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:45.057Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:45.057Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:48:48.083Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:48.085Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:48.086Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:48:51.117Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:51.119Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:51.119Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:48:54.158Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:54.159Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:54.160Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:48:57.191Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:57.193Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:57.194Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:48:59.751Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:48:59.754Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:48:59.755Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T17:49:00.217Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T17:49:00.219Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T17:49:00.219Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:02:50.603Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:02:50.609Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:02:50.610Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:02:53.687Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:02:53.690Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:02:53.691Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:02:56.759Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:02:56.762Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:02:56.763Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:02:59.794Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:02:59.795Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:02:59.796Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:02.829Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:02.832Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:02.833Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:05.877Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:05.880Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:05.881Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:08.919Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:08.922Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:08.923Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:11.961Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:11.965Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:11.965Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:15.000Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:15.003Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:15.004Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:18.043Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:18.045Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:18.045Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:21.093Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:21.098Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:21.101Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:24.129Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:24.131Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:24.131Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:27.176Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:27.180Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:27.181Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:30.227Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:30.229Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:30.230Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:33.266Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:33.269Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:33.269Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:36.303Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:36.306Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:36.307Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:39.337Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:39.338Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:39.339Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:42.375Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:42.377Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:42.377Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:45.405Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:45.407Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:45.407Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:48.447Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:48.449Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:48.449Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:51.481Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:51.483Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:51.484Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:54.523Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:54.525Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:54.526Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:03:57.064Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:03:57.067Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:03:57.068Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:39.917Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:39.923Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:39.924Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:42.954Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:42.956Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:42.956Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:44.215Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:44.217Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:44.218Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:47.091Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:47.093Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:47.094Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:50.159Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:50.162Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:50.162Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:53.238Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:53.241Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:53.242Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:56.282Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:56.284Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:56.285Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:06:59.323Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:06:59.325Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:06:59.326Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:02.365Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:02.367Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:02.368Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:05.399Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:05.400Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:05.401Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:08.449Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:08.453Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:08.454Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:11.495Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:11.498Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:11.500Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:14.525Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:14.527Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:14.527Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:17.558Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:17.561Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:17.562Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:20.594Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:20.597Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:20.598Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:23.636Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:23.640Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:23.640Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:26.673Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:26.675Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:26.676Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:29.702Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:29.703Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:29.704Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:32.738Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:32.741Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:32.742Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:35.790Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:35.794Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:35.795Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:38.823Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:38.825Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:38.825Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:41.856Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:41.858Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:41.859Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:44.891Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:44.894Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:44.895Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:47.924Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:47.928Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:47.929Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:50.963Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:50.965Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:50.965Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:53.992Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:53.993Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:53.994Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:07:57.027Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:07:57.029Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:07:57.030Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:00.068Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:00.070Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:00.071Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:03.099Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:03.101Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:03.101Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:06.134Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:06.136Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:06.137Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:09.165Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:09.167Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:09.167Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:12.197Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:12.198Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:12.199Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:15.229Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:15.233Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:15.233Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:18.257Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:18.259Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:18.259Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:21.300Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:21.302Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:21.303Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:24.351Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:24.353Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:24.355Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:27.384Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:27.385Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:27.386Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:30.417Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:30.420Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:30.421Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:33.450Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:33.453Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:33.454Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:36.494Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:36.496Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:36.497Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:39.540Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:39.543Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:39.543Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:42.607Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:42.610Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:42.611Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:45.647Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:45.649Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:45.649Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:48.690Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:48.692Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:48.693Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:51.724Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:51.726Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:51.727Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:54.775Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:54.777Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:54.778Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:08:57.820Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:08:57.822Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:08:57.823Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:00.850Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:00.851Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:00.852Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:03.891Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:03.894Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:03.895Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:06.923Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:06.925Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:06.925Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:09.956Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:09.958Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:09.959Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:13.005Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:13.008Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:13.009Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:16.042Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:16.045Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:16.046Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:19.093Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:19.096Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:19.097Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:22.132Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:22.134Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:22.135Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:25.163Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:25.164Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:25.165Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:28.212Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:28.219Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:28.219Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:31.245Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:31.247Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:31.248Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:34.289Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:34.292Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:34.293Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:37.335Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:37.338Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:37.339Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:40.369Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:40.371Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:40.372Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:43.413Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:43.418Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:43.419Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:46.449Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:46.451Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:46.451Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:49.478Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:49.480Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:49.480Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:52.521Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:52.524Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:52.525Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:55.565Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:55.567Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:55.568Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:09:58.607Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:09:58.610Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:09:58.610Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:01.652Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:01.654Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:01.655Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:04.683Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:04.685Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:04.685Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:07.737Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:07.739Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:07.740Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:10.770Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:10.772Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:10.773Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:13.820Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:13.821Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:13.822Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:16.859Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:16.861Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:16.862Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:19.904Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:19.906Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:19.907Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:22.951Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:22.953Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:22.954Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:26.011Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:26.016Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:26.017Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:29.046Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:29.047Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:29.048Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:32.087Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:32.090Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:32.091Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:35.119Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:35.121Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:35.122Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:38.150Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:38.152Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:38.153Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:41.194Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:41.198Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:41.200Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:44.228Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:44.229Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:44.230Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:47.261Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:47.263Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:47.264Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:50.298Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:50.301Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:50.302Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:53.339Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:53.341Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:53.343Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:56.380Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:56.382Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:56.383Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:10:59.411Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:10:59.413Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:10:59.413Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:11:02.467Z] error: <httpProxy> Error calling http://localhost//api/4/cpu...
+[2026-03-09T18:11:02.469Z] error: <httpProxy> [ 500, [AggregateError: ] { code: 'ECONNREFUSED' } ]
+[2026-03-09T18:11:02.470Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-09T18:11:05.518Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:08.560Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:10.570Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:13.492Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:16.554Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:19.624Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:22.655Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:25.696Z] error: <glances> HTTP 404 getting data from glances API. Data: {"detail":"Not Found"}
+[2026-03-09T18:11:45.003Z] error: undefined
+[2026-03-09T19:39:09.379Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-09T19:39:09.412Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-09T19:39:09.415Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T02:13:54.576Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T02:13:54.609Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T02:13:54.612Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:37:35.052Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:37:35.101Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:37:35.106Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:37:36.459Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:37:36.471Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:37:36.474Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:37:39.287Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:37:39.301Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:37:39.304Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:40:21.140Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:40:21.145Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:40:21.147Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:40:24.186Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:40:24.191Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:40:24.191Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:40:27.224Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:40:27.227Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:40:27.228Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:40:59.710Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:40:59.752Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:40:59.759Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-10T23:41:02.939Z] error: <httpProxy> Error calling http://192.168.0.128:61208/api/4/cpu...
+[2026-03-10T23:41:02.956Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.128:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.128:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.128',
+    port: 61208
+  }
+]
+[2026-03-10T23:41:02.961Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:41:03.846Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:41:03.868Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:41:03.870Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:41:04.048Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:41:04.051Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:41:04.052Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:41:05.272Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:41:05.275Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:41:05.276Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:41:08.282Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:41:08.286Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:41:08.287Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:47:24.785Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:47:24.793Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:47:24.794Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:47:26.304Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:47:26.307Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:47:26.307Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:47:29.310Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:47:29.314Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:47:29.315Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:48:59.054Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:48:59.056Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:48:59.056Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:49:00.788Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:49:00.791Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:49:00.791Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T03:49:02.498Z] error: <httpProxy> Error calling http://192.168.0.64:61208/api/4/cpu...
+[2026-03-12T03:49:02.500Z] error: <httpProxy> [
+  500,
+  Error: connect ECONNREFUSED 192.168.0.64:61208
+      at <unknown> (Error: connect ECONNREFUSED 192.168.0.64:61208) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '192.168.0.64',
+    port: 61208
+  }
+]
+[2026-03-12T03:49:02.501Z] error: <glances> HTTP 500 getting data from glances API. Data: [object Object]
+[2026-03-12T16:02:51.598Z] error: undefined
+[2026-03-12T16:06:29.582Z] error: undefined
+[2026-03-12T16:06:29.587Z] error: undefined
+[2026-03-12T16:08:12.936Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:08:12.937Z] error: YAMLException: end of the stream or a document separator is expected (13:1)
+
+ 10 |     metric: cpu
+ 11 |     diskUnits: bytes
+ 12 |     refreshInterval: 1000
+ 13 | - Self-Hosted:
+------^
+ 14 |     - NGINX Proxy Manager:
+ 15 |         icon: si-nginxproxymanager
+[2026-03-12T16:08:13.137Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:08:13.138Z] error: YAMLException: end of the stream or a document separator is expected (13:1)
+
+ 10 |     metric: cpu
+ 11 |     diskUnits: bytes
+ 12 |     refreshInterval: 1000
+ 13 | - Self-Hosted:
+------^
+ 14 |     - NGINX Proxy Manager:
+ 15 |         icon: si-nginxproxymanager
+[2026-03-12T16:08:26.711Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:08:26.712Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:08:26.918Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:08:26.918Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:11:05.616Z] error: undefined
+[2026-03-12T16:13:04.747Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:04.748Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:04.750Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:04.750Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:05.013Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:05.014Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:26.289Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:26.290Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:26.292Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:26.293Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:26.468Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:26.468Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:48.807Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:48.807Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:48.809Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:48.809Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:13:48.965Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:13:48.965Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:14:36.315Z] error: Failed to load services.yaml, please check for errors
+[2026-03-12T16:14:36.315Z] error: TypeError: b[c].forEach is not a function
+[2026-03-12T16:17:05.625Z] error: <glances> Missing Glances URL
+[2026-03-12T16:17:08.533Z] error: <glances> Missing Glances URL
+[2026-03-12T16:17:11.545Z] error: <glances> Missing Glances URL
+[2026-03-12T16:17:14.556Z] error: <glances> Missing Glances URL
+[2026-03-12T16:17:17.571Z] error: undefined
+[2026-03-12T16:17:18.328Z] error: undefined
+[2026-03-13T21:44:23.958Z] error: Failed to load services.yaml, please check for errors
+[2026-03-13T21:44:23.960Z] error: YAMLException: bad indentation of a sequence entry (30:13)
+
+ 27 |         href: http://192.168.0.128:8080/
+ 28 |         description: File Server
+ 29 |     - OpenCloud
+ 30 |         icon: si-opencloud
+------------------^
+ 31 |         href: https://mafmanhomelab-cloud.d ...
+ 32 |         description: File Server
+[2026-03-13T21:44:24.037Z] error: Failed to load services.yaml, please check for errors
+[2026-03-13T21:44:24.038Z] error: YAMLException: bad indentation of a sequence entry (30:13)
+
+ 27 |         href: http://192.168.0.128:8080/
+ 28 |         description: File Server
+ 29 |     - OpenCloud
+ 30 |         icon: si-opencloud
+------------------^
+ 31 |         href: https://mafmanhomelab-cloud.d ...
+ 32 |         description: File Server
+[2026-03-13T21:44:24.512Z] error: Failed to load services.yaml, please check for errors
+[2026-03-13T21:44:24.513Z] error: YAMLException: bad indentation of a sequence entry (30:13)
+
+ 27 |         href: http://192.168.0.128:8080/
+ 28 |         description: File Server
+ 29 |     - OpenCloud
+ 30 |         icon: si-opencloud
+------------------^
+ 31 |         href: https://mafmanhomelab-cloud.d ...
+ 32 |         description: File Server

@@ -1,0 +1,11 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/info-widgets/
+- search:
+    provider: duckduckgo
+    target: _blank
+- datetime:
+    text_size: md
+    format:
+        dateStyle: short
+        timeStyle: short
