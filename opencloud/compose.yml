@@ -1,0 +1,37 @@
+services:
+  caddy:
+    image: serfriz/caddy-duckdns:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DUCKDNS_API_TOKEN: ${DUCKDNS_API_TOKEN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./www:/srv/www:ro
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+    networks:
+      - opencloud_net
+
+  opencloud:
+    image: opencloudeu/opencloud:latest
+    restart: unless-stopped
+    entrypoint: ["/bin/sh", "-c", "opencloud init || true && opencloud server"]
+    environment:
+      OC_URL: https://mafmanhomelab-cloud.duckdns.org
+      OC_LOG_LEVEL: warn
+      OC_LOG_PRETY: "true"
+      PROXY_TLS: "false"
+      PROXY_HTTP_ADDR: "0.0.0.0:9200"
+      IDM_ADMIN_PASSWORD: ${INITIAL_ADMIN_PASSWORD}
+      OC_INSECURE: "true"
+    volumes:
+      - ./opencloud_config:/etc/opencloud
+      - ./opencloud_data:/var/lib/opencloud
+    networks:
+      - opencloud_net
+
+networks:
+  opencloud_net:
