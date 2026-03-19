@@ -1,2 +1,6 @@
 # ignore .env files
 */.env
+
+# Ignore database directories
+*/postgres
+*/*-pgdata
