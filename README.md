@@ -1,0 +1,1 @@
+I'm running these services on a Raspberry Pi 4 on my home network to gain server experience and improve my personal data sovereignty. This stack is about two years in the making, having started on a Raspberry Pi 3 and subsequently outgrown it 
