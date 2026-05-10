@@ -4,7 +4,7 @@ metadata:
   name: pihole-etc-claim
   namespace: pihole
 spec:
-  storageClassName: longhorn-ssd
+  storageClassName: longhorn
   accessModes:
   - ReadWriteOnce
   resources:
@@ -17,7 +17,7 @@ metadata:
   name: pihole-dnsmasq-claim
   namespace: pihole
 spec:
-  storageClassName: longhorn-ssd
+  storageClassName: longhorn
   accessModes:
   - ReadWriteOnce
   resources:

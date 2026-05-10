@@ -61,7 +61,7 @@ loki:
         directory: /var/loki/chunks
   persistence:
     enabled: true
-    storageClassName: longhorn-ssd
+    storageClassName: longhorn
     size: 50Gi
 
 # -- Mimir chart values. Resources are set to a minimum by default.
@@ -108,7 +108,7 @@ mimir:
   compactor:
     persistentVolume:
       enabled: true
-      storageClass: longhorn-ssd
+      storageClass: longhorn
       size: 50Gi
     resources:
       requests:
@@ -123,7 +123,7 @@ mimir:
       enabled: false
     persistentVolume:
       enabled: true
-      storageClass: longhorn-ssd
+      storageClass: longhorn
       size: 50Gi
     resources:
       requests:
@@ -151,7 +151,7 @@ mimir:
       enabled: false
     persistentVolume:
       enabled: true
-      storageClass: longhorn-ssd
+      storageClass: longhorn
       size: 50Gi
     resources:
       requests:
@@ -186,7 +186,7 @@ tempo:
     replicas: 1
     persistentVolume:
       enabled: true
-      storageClass: longhorn-ssd
+      storageClass: longhorn
       size: 50Gi
     config:
       replication_factor: 1
