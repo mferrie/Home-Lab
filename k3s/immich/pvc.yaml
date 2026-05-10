@@ -5,7 +5,7 @@ metadata:
   name: immich-database
   namespace: immich
 spec:
-  storageClassName: longhorn-ssd
+  storageClassName: longhorn
   accessModes:
     - ReadWriteMany
   resources:
@@ -20,7 +20,7 @@ metadata:
   name: immich-machine-learning
   namespace: immich
 spec:
-  storageClassName: longhorn-ssd
+  storageClassName: longhorn
   accessModes:
     - ReadWriteMany
   resources:

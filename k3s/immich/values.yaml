@@ -63,7 +63,7 @@ valkey:
       # Optional: Set this to persistentVolumeClaim to keep job queues persistent
       type: persistentVolumeClaim
       accessMode: ReadWriteOnce
-      storageClass: longhorn-ssd
+      storageClass: longhorn
 
 # Immich components
 
@@ -109,4 +109,4 @@ machine-learning:
       # Optional: Set this to persistentVolumeClaim to avoid downloading the ML models every start.
       type: persistentVolumeClaim
       accessMode: ReadWriteMany
-      storageClass: longhorn-ssd
+      storageClass: longhorn
