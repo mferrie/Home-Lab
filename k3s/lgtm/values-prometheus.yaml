@@ -1,0 +1,38 @@
+namespaceOverride: ""
+rbac:
+  create: true
+releaseLabel: true
+prometheus:
+  prometheusSpec:
+    scrapeInterval: "60s"
+    remoteWrite:
+    - url:  http://lgtm-mimir-nginx:80/api/v1/push
+    externalLabels:
+       environment: mimir
+  monitor:
+    enabled: true
+    interval: ""
+    sampleLimit: 0
+    targetLimit: 0
+    labelLimit: 0
+    labelNameLengthLimit: 0
+    labelValueLengthLimit: 0
+    scrapeTimeout: ""
+    proxyUrl: ""
+    honorLabels: true
+    metricRelabelings: []
+    relabelings: []
+
+# For cloud provider environments turn to false
+kubeScheduler:
+  enabled: false
+kubeControllerManager:
+  enabled: false
+
+grafana:
+  enabled: false
+  forceDeployDashboards: true
+
+alertmanager:
+  enabled: false
+
