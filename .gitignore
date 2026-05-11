@@ -1,6 +1,6 @@
 .env
-/data
-/immich-data
-/library
-/pgdata
-/postgres
+*/data
+*/immich-data
+*/library
+*/pgdata
+*/postgres
