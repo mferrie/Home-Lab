@@ -1,5 +1,5 @@
 ## Overview
-I'm self-hosting several services on two Raspberry Pi's and one Dell Latitude 7490 to improve my digital sovereignty and reduce third-party costs. My setup previously used standalone Docker agents running Docker Compose stacks, but now I'm teaching myself orchestration using k3s to add some measure of self-healing and redundancy.
+I'm self-hosting several services on two Raspberry Pi's and one Dell Latitude 7490 to improve my digital sovereignty and reduce third-party costs.
 
 ## Goals
 - Photo storage
