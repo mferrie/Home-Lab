@@ -14,6 +14,5 @@ The Raspberry Pi 3 uses an SD card for system storage, so it is unsuitable as a 
 The architecture mismatch between the Raspberry Pis (ARM 64) and the laptop (AMD64) necessitates multi-architecture container images or use of deployment constraints
 
 ## Tools
-- k3s for container orchestration
+- Docker Compose
 - Git for version control
-- Minimal use of Claude to help explain concepts in the documentation and fix minor misconfigurations
