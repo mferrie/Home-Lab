@@ -1,6 +1,17 @@
-.env
-*/data
-*/immich-data
-*/library
-*/pgdata
-*/postgres
+# Ignore everything
+*
+# Un-ignore directories
+!Docker/
+!Docker/Pi3/
+!Docker/Pi3/pihole/
+!Docker/Pi3/pihole/compose.yml
+
+!Docker/Pi4/
+!Docker/Pi4/forgejo/
+!Docker/Pi4/forgejo/compose.yml
+!Docker/Pi4/immich/
+!Docker/Pi4/immich/compose.yml
+!Docker/Pi4/mealie/
+!Docker/Pi4/mealie/compose.yml
+!Docker/Pi4/owncloud/
+!Docker/Pi4/owncloud/compose.yml
