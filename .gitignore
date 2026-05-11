@@ -15,3 +15,6 @@
 !Docker/Pi4/mealie/compose.yml
 !Docker/Pi4/owncloud/
 !Docker/Pi4/owncloud/compose.yml
+
+# Ignore Immich library
+Docker/Pi4/immich/library/
