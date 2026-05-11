@@ -17,15 +17,15 @@ services:
       - mariadb
       - redis
     environment:
-      - OWNCLOUD_DOMAIN=cloud.lan
-      - OWNCLOUD_TRUSTED_DOMAINS=cloud.lan
+      - OWNCLOUD_DOMAIN=192.168.0.12:8080
+      - OWNCLOUD_TRUSTED_DOMAINS=192.168.0.12:8080
       - OWNCLOUD_DB_TYPE=mysql
       - OWNCLOUD_DB_NAME=owncloud
       - OWNCLOUD_DB_USERNAME=owncloud
       - OWNCLOUD_DB_PASSWORD=owncloud
       - OWNCLOUD_DB_HOST=mariadb
-      - OWNCLOUD_ADMIN_USERNAME=admin
-      - OWNCLOUD_ADMIN_PASSWORD=admin
+      - OWNCLOUD_ADMIN_USERNAME=${USERNAME}
+      - OWNCLOUD_ADMIN_PASSWORD=${PASSWORD}
       - OWNCLOUD_MYSQL_UTF8MB4=true
       - OWNCLOUD_REDIS_ENABLED=true
       - OWNCLOUD_REDIS_HOST=redis
