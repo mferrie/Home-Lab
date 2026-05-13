@@ -17,7 +17,7 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: America/Chicago
-      BASE_URL: mealie.lan
+      BASE_URL: 192.168.0.12:9925
 
 volumes:
   mealie-data:

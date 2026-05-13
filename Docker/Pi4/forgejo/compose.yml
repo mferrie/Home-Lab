@@ -4,7 +4,7 @@ networks:
 
 services:
   server:
-    image: codeberg.org/forgejo/forgejo:15
+    image: codeberg.org/forgejo/forgejo:latest
     container_name: forgejo
     environment:
       - USER_UID=1000
@@ -13,8 +13,10 @@ services:
     networks:
       - forgejo
     volumes:
-      - ./data:/data
+      - data:/data
       - /etc/localtime:/etc/localtime:ro
     ports:
       - '3000:3000'
       - '222:22'
+volumes:
+  data:
