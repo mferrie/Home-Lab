@@ -25,5 +25,5 @@ services:
       - data:/data
       - letsencrypt:/etc/letsencrypt
 volumes:
-	data:
-	letsencrypt:
+  data:
+  letsencrypt:
