@@ -17,8 +17,8 @@ services:
       - mariadb
       - redis
     environment:
-      - OWNCLOUD_DOMAIN=cloud.lan
-      - OWNCLOUD_TRUSTED_DOMAINS=cloud.lan
+      - OWNCLOUD_DOMAIN=http://cloud.lan
+      - OWNCLOUD_TRUSTED_DOMAINS=http://cloud.lan
       - OWNCLOUD_DB_TYPE=mysql
       - OWNCLOUD_DB_NAME=owncloud
       - OWNCLOUD_DB_USERNAME=owncloud
