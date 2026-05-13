@@ -39,7 +39,7 @@ services:
       POSTGRES_DB: immich
       POSTGRES_INITDB_ARGS: '--data-checksums'
     volumes:
-      - ./pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql/data
     shm_size: 128mb
     restart: always
     healthcheck:
@@ -48,3 +48,4 @@ services:
 volumes:
   model-cache:
   immich-data:
+  pgdata:
