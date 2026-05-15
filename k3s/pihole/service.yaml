@@ -1,0 +1,61 @@
+# DNS Service — exposed via MetalLB at 192.168.0.200
+# Splits TCP and UDP into separate Services because MetalLB requires it
+# for mixed-protocol LoadBalancer services on older versions.
+# If you are on MetalLB >= 0.13 with the "Mixed Protocol" feature enabled,
+# you can consolidate into a single Service with both protocols.
+apiVersion: v1
+kind: Service
+metadata:
+  name: pihole-dns-tcp
+  namespace: pihole
+  annotations:
+    metallb.io/loadBalancerIPs: 192.168.0.201
+    metallb.io/allow-shared-ip: pihole-dns  # Allows TCP+UDP to share the same IP
+spec:
+  type: LoadBalancer
+  selector:
+    app: pihole
+  ports:
+    - name: dns-tcp
+      port: 53
+      targetPort: 53
+      protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pihole-dns-udp
+  namespace: pihole
+  annotations:
+    metallb.io/loadBalancerIPs: 192.168.0.201
+    metallb.io/allow-shared-ip: pihole-dns
+spec:
+  type: LoadBalancer
+  selector:
+    app: pihole
+  ports:
+    - name: dns-udp
+      port: 53
+      targetPort: 53
+      protocol: UDP
+---
+# Web admin UI — cluster-internal only.
+# Access via port-forward or add an Ingress below if you want it exposed.
+apiVersion: v1
+kind: Service
+metadata:
+  name: pihole-web
+  namespace: pihole
+spec:
+  type: ClusterIP
+  selector:
+    app: pihole
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+      protocol: TCP
+    - name: https
+      port: 443
+      targetPort: 443
+      protocol: TCP
