@@ -1,0 +1,30 @@
+replicaCount: 1
+image:
+  pullPolicy: IfNotPresent
+persistence:
+  config:
+    enabled: true
+    size: 5Gi
+    storageClass: 'longhorn'
+    media:
+      enabled: true
+      size: 50Gi
+      storageClass: "longhorn-ssd"
+ingress:
+  enabled: true
+  className: 'traefik'
+  hosts:
+    - host: jellyfin.lan
+      paths:
+        - path: /
+          pathType: Prefix
+resources:
+  limits:
+    cpu: 2000m
+    memory: 4Gi
+  requests:
+    cpu: 500m
+    memory: 1Gi
+nodeSelector: {}
+tolerations: {}
+affinity: {}
