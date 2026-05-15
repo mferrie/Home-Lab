@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pihole
+  namespace: pihole
+  labels:
+    app: pihole
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: pihole
+  template:
+    metadata:
+      labels:
+        app: pihole
+    spec:
+      containers:
+        - name: pihole
+          image: pihole/pihole:2026.05.0
+          ports:
+            - name: dns-tcp
+              containerPort: 53
+              protocol: TCP
+            - name: dns-udp
+              containerPort: 53
+              protocol: UDP
+            - name: dhcp
+              containerPort: 67
+              protocol: UDP
+            - name: web
+              containerPort: 80
+              protocol: TCP
+            - name: web-tls
+              containerPort: 443
+              protocol: TCP
+          env:
+            - name: TZ
+              value: "America/Chicago"
+            - name: FTLCONF_webserver_api_password
+              valueFrom:
+                secretKeyRef:
+                  name: pihole-webpassword
+                  key: FTLCONF_webserver_api_password
+            - name: FTLCONF_dns_upstreams
+              value: "8.8.8.8;8.8.4.4"
+            - name: FTLCONF_dns_listeningMode
+              value: "all"
+          volumeMounts:
+            - name: pihole-config
+              mountPath: /etc/pihole
+            - name: pihole-dnsmasq
+              mountPath: /etc/dnsmasq.d
+          livenessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 5
+          readinessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+      volumes:
+        - name: pihole-config
+          persistentVolumeClaim:
+            claimName: pihole-config
+        - name: pihole-dnsmasq
+          persistentVolumeClaim:
+            claimName: pihole-dnsmasq
