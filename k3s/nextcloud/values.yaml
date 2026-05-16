@@ -1,0 +1,13 @@
+services:
+  type: LoadBalancer
+loadBalancerIP: 192.168.0.200
+ingress:
+  enabled: true
+  hosts:
+  - host: cloud.lan
+    paths:
+      - /
+nextcloud:
+  host: cloud.lan
+  username: admin
+  password: changeMe
