@@ -1,0 +1,42 @@
+env:
+  TZ: "America/Chicago"
+envSecrets:
+  dbCredentials:
+    existingSecret: "db-secret"
+  dbEncryption:
+    existingSecret: "db-encryption"
+    key: "db-encryption-key"
+service:
+  type: LoadBalancer
+  annotations:
+    metallb.io/address-pool: default
+  ports:
+    app:
+      port: 7575
+      targetPort: http
+      protocol: TCP
+  ipFamilyPolicy: SingleStack
+  ipFamilies: []
+ingress:
+  enabled: true
+  ingressClassName: "traefik"
+  hosts:
+    - host: homarr.lan
+      paths:
+      - path: /
+  tls: []
+resources:
+  limits:
+    cpu: 100m
+    memory: 1Gi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+persistence:
+  homarrDatabase:
+    enabled: true
+    name: "homarr-database"
+    storageClassName: "longhorn-ssd"
+    accessMode: "ReadWriteOnce"
+    size: "50Mi"
+    mountPath: "/appdata"
