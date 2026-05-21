@@ -1,3 +1,5 @@
+image:
+  tag: "v1.61.1-beta.1"
 env:
   TZ: "America/Chicago"
 envSecrets:
