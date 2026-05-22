@@ -16,3 +16,5 @@ The architecture mismatch between the Raspberry Pis (ARM 64) and the laptop (AMD
 ## Tools
 - Docker Compose
 - Git for version control
+- k3s for orchestration
+- Longhorn for distributed storage
