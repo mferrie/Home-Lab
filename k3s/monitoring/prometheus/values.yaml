@@ -1,8 +1,55 @@
-server:
-  ingress:
-    enabled: true
-    ingressClassName: traefik
-    hosts:
-      - prometheus.lan
-    path: /
-    pathType: Prefix
+grafana:
+  enabled: false
+
+alertmanager:
+  enabled: true
+  alertmanagerSpec:
+    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: longhorn-ssd
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 5Gi
+
+prometheus:
+  prometheusSpec:
+    retention: 30d
+    retentionSize: "20GB"
+    resources:
+      requests:
+        memory: 512Mi
+        cpu: 250m
+      limits:
+        memory: 2Gi
+        cpu: 1000m
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: longhorn-ssd
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 20Gi
+    # Scrape Loki metrics
+    additionalScrapeConfigs:
+      - job_name: loki
+        static_configs:
+          - targets: ["loki.monitoring.svc.cluster.lan:3100"]
+
+# Reduce resource footprint
+prometheusOperator:
+  resources:
+    requests:
+      memory: 128Mi
+      cpu: 100m
+    limits:
+      memory: 256Mi
+      cpu: 200m
+
+nodeExporter:
+  enabled: true   # useful for node-level metrics
+
+kubeStateMetrics:
+  enabled: true
