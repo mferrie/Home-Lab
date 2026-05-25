@@ -1,0 +1,15 @@
+global:
+  clusterDomain: "cluster.lan"
+deploymentMethod: Distributed
+loki:
+  gateway:
+    enabled: false
+  ingress:
+    enable: true
+    ingressClassName: traefik
+    hosts:
+      - loki.lan
+        paths:
+          - path: /
+    tls: {}
+

@@ -1,0 +1,8 @@
+server:
+  ingress:
+    enabled: true
+    ingressClassName: traefik
+    hosts:
+      - prometheus.lan
+    path: /
+    pathType: Prefix
