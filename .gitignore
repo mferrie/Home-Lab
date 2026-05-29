@@ -1,3 +1,7 @@
 # Ignore environment files
 .env
 *.env
+
+# Ignore NetBird config with sensitive info
+Docker/Pi4/netbird/config.yaml
+Docker/Pi4/netbird/crowdsec/
