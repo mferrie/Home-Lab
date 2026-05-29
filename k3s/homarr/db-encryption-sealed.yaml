@@ -1,0 +1,13 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: db-encryption
+  namespace: homarr
+spec:
+  encryptedData:
+    db-encryption-key: AgCz6QloUQr3GKYsVywkRPcOETKaxVdmDmxKbREXRJQW1DuKVxGitejFD1DbbqzQNa8AdBqrnJxG4JEMaFcJhbLTsrBRPfUMvAM4Am0yd9E5SNqMOzpdATEEQ4kzhUC9mLi5nN8UvissC5vNfmV/WRgFjY8uHa0x99ZU2zK0u3HMy1ACVvJ6GkaWEX2GpRP83Tupa+yoXL1DR0kzk2g9yDyTISOwONG+tWFtY23LXrmPA9rX0S1HzexfTf/6LOwg4X4SWW1nG1/ZTlicUbOMkNgE+KL8BonTk+4zoHfZK+Wkb+T4RtWYT/tLnx+javVaY9D7RhHqNlvlMLe5WuXXlUsuh2wP5DQTdpimaSMT4aCsvwVpck/tW8TFP8BUwz52kdj+vGFxj3yMlKHQZm0k5+4pG8Nl4Rm6i/I8NRy585mPtPhFwQ2hJ1fa9x4ltOi41Gscaoeu2hofwx8sZ0VMeYhzOeOfAGmMMNiMFNy9skrvZown14ex5/+u4TFlgGwfg4xyjFRLv6Nrm9oYYecop8NX/ambtKW/WI+8JXsF6f0FkxFG5BV7LFQh5v6No3HhKAqQ1wCgr/3lWemz9z3wW8hDcJOt6i119y0WXt8SqqEx4A6GkFLna9LMY49BzP08/A4ltdg0p9bc1CtwuXhaBRflkBL/3qurz1L6o6RuYz+2rmzt3gbI9JoTxn2S7U/WgKec487ez8LI1x5WpUSY+9g1Vapqvac2WYfAliBW9+R+flB7D+NdoqQdHD/6VMCLkT2Mfgzq66UUMqYCa5/cMTKU
+  template:
+    metadata:
+      name: db-encryption
+      namespace: homarr
