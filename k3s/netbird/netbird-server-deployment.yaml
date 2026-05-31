@@ -61,6 +61,17 @@ spec:
             - mountPath: /etc/netbird/config.yaml
               name: netbird-server-cm1
               subPath: config.yaml
+          env:
+          - name: NB_AUTH_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: netbird-secrets
+                key: authSecret
+          - name: NB_STORE_ENCRYPTION_KEY
+            valueFrom:
+              secretKeyRef:
+                name: netbird-secrets
+                key: encryptionKey
       restartPolicy: Always
       volumes:
         - name: netbird-data
