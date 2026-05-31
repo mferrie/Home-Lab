@@ -7,11 +7,16 @@ metadata:
   labels:
     io.kompose.service: netbird-server
   name: netbird-server
+  namespace: netbird
 spec:
   ports:
-    - name: "3478"
+    - name: "stun"
       port: 3478
       protocol: UDP
       targetPort: 3478
+    - name: "http"
+      port: 80
+      protocol: TCP
+      targetPort: 80
   selector:
     io.kompose.service: netbird-server

@@ -4,7 +4,9 @@ metadata:
   labels:
     io.kompose.service: netbird-data
   name: netbird-data
+  namespace: netbird
 spec:
+  storageClassName: longhorn-ssd
   accessModes:
     - ReadWriteOnce
   resources:

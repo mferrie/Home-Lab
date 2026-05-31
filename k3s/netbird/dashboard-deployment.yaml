@@ -7,6 +7,7 @@ metadata:
   labels:
     io.kompose.service: dashboard
   name: dashboard
+  namespace: netbird
 spec:
   replicas: 1
   selector:
@@ -30,3 +31,12 @@ spec:
             - containerPort: 80
               protocol: TCP
       restartPolicy: Always
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: NotIn
+                    values:
+                      - pi-3

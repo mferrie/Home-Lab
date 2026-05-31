@@ -7,6 +7,7 @@ metadata:
   labels:
     io.kompose.service: netbird-server
   name: netbird-server
+  namespace: netbird
 spec:
   replicas: 1
   selector:
@@ -37,25 +38,23 @@ spec:
             - mountPath: /etc/netbird/config.yaml
               name: netbird-server-cm1
               subPath: config.yaml
-          env:
-          - name: NB_AUTH_SECRET
-            valueFrom:
-              secretKeyRef:
-                name: netbird-secrets
-                key: authSecret
-          - name: NB_STORE_ENCRYPTION_KEY
-            valueFrom:
-              secretKeyRef:
-                name: netbird-secrets
-                key: encryptionKey
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: NotIn
+                    values:
+                      - pi-3
       restartPolicy: Always
       volumes:
         - name: netbird-data
           persistentVolumeClaim:
             claimName: netbird-data
-        - configMap:
+        - name: netbird-server-cm1
+          secret:
+            secretName: netbird-server-config
             items:
               - key: config.yaml
                 path: config.yaml
-            name: netbird-server-cm1
-          name: netbird-server-cm1
