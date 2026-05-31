@@ -4,12 +4,6 @@ metadata:
   annotations:
     kompose.cmd: kompose convert -f docker-compose.yml
     kompose.version: 1.38.0 (a8f5d1cbd)
-    traefik.enable: "true"
-    traefik.http.routers.netbird-dashboard.entrypoints: websecure
-    traefik.http.routers.netbird-dashboard.priority: "1"
-    traefik.http.routers.netbird-dashboard.rule: Host(`netbird.mafmanhomelab.dedyn.io`)
-    traefik.http.routers.netbird-dashboard.tls: "true"
-    traefik.http.services.netbird-dashboard.loadbalancer.server.port: "80"
   labels:
     io.kompose.service: dashboard
   name: dashboard
