@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  AUTH_AUDIENCE: netbird-dashboard
+  AUTH_AUTHORITY: https://netbird.mafmanhomelab.dedyn.io/oauth2
+  AUTH_CLIENT_ID: netbird-dashboard
+  AUTH_CLIENT_SECRET: ""
+  AUTH_REDIRECT_URI: /nb-auth
+  AUTH_SILENT_REDIRECT_URI: /nb-silent-auth
+  AUTH_SUPPORTED_SCOPES: openid profile email groups
+  LETSENCRYPT_DOMAIN: none
+  NETBIRD_MGMT_API_ENDPOINT: https://netbird.mafmanhomelab.dedyn.io
+  NETBIRD_MGMT_GRPC_API_ENDPOINT: https://netbird.mafmanhomelab.dedyn.io
+  NGINX_SSL_PORT: "443"
+  USE_AUTH0: "false"
+kind: ConfigMap
+metadata:
+  labels:
+    io.kompose.service: dashboard-dashboard-env
+  name: dashboard-env
