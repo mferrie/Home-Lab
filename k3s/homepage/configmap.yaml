@@ -52,6 +52,16 @@ data:
             href: http://pihole.lan/admin
             description: DNS server / sinkhole filter
             siteMonitor: http://pihole-web.pihole.svc.cluster.local
+        - Mealie:
+            icon: si-mealie
+            href: http://mealie.lan
+            description: Recipe manager
+            siteMonitor: http://mealie.mealie.svc.cluster.local:9000
+        - ForgeJo:
+            icon: si-forgejo
+            href: http://git.lan
+            description: Git server
+            siteMonitor: http://forgejo-http.forgejo.svc.cluster.local:3000
   widgets.yaml: |
     - kubernetes:
         cluster:
