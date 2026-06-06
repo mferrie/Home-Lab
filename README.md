@@ -18,3 +18,14 @@ The architecture mismatch between the Raspberry Pis (ARM 64) and the laptop (AMD
 - Git for version control
 - k3s for orchestration
 - Longhorn for distributed storage
+
+## Screenshots
+![image ForgeJo](./Screenshots/forgejo.png)
+![image Grafana](./Screenshots/grafana.png)
+![image HomePage](./Screenshots/homepage.png)
+![image Immich](./Screenshots/immich.png)
+![image Longhorn](./Screenshots/longhorn.png)
+![image Mealie](./Screenshots/mealie.png)
+![image Netbird](./Screenshots/netbird.png)
+![image NextCloud](./Screenshots/nextcloud.png)
+![image PiHole](./Screenshots/pihole.png)
