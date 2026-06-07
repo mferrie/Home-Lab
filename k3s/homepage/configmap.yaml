@@ -22,6 +22,7 @@ data:
         opacity: 50
     cardBlur: xs
     theme: dark
+    color: "neutral"
     opacity: 75
     headerStyle: boxed
     layout:
@@ -57,6 +58,12 @@ data:
             description: Distributed block storage
             siteMonitor: http://longhorn-frontend.longhorn-system.svc.cluster.local
             statusStyle: 'dot'
+        - LGTM Stack:
+            icon: sh-grafana
+            href: http://grafana.lan/
+            description: Cluster metrics
+            siteMonitor: http://prometheus-grafana.monitoring.svc.cluster.local
+            statusStyle: 'dot'
     - Networking:
         - PiHole:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
@@ -82,13 +89,6 @@ data:
             href: http://cloud.lan/
             description: NAS server
             siteMonitor: http://nextcloud.nextcloud.svc.cluster.local:8080
-            statusStyle: 'dot'
-    - Utilities:
-        - LGTM Stack:
-            icon: sh-grafana
-            href: http://grafana.lan/
-            description: Cluster metrics
-            siteMonitor: http://prometheus-grafana.monitoring.svc.cluster.local
             statusStyle: 'dot'
         - Mealie:
             icon: sh-mealie
