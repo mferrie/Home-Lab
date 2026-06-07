@@ -7,61 +7,94 @@ metadata:
     app.kubernetes.io/name: homepage
 data:
   kubernetes.yaml: |
-    mode: cluster
+    mode: default
   settings.yaml: |
     providers:
       longhorn:
         url: https://longhorn.lan
+    title: Local Cloud
+    description: Making Big Tech obsolete
+    background:
+        image: https://eol.jsc.nasa.gov/DatabaseImages/EO/highres/ISS056/ISS056-E-77502.JPG
+        blur: "sm"
+        saturate: 100
+        brightness: 100
+        opacity: 50
+    cardBlur: xs
+    theme: dark
+    opacity: 75
+    headerStyle: boxed
+    layout:
+        Networking:
+            style: row
+            columns: 4
+        Media:
+            style: row
+            columns: 4
+        Utilities:
+            style: row
+            columns: 4
+
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
     - Developer:
         - Github:
-            - icon: si-github
+            - icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/github-light.png
               href: https://github.com/mferrie
   services.yaml: |
     - Infrastructure:
         - Longhorn:
-            icon: si-longhorn
+            icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/rancher-longhorn.png
             href: http://longhorn.lan/
             description: Distributed block storage
             siteMonitor: http://longhorn-frontend.longhorn-system.svc.cluster.local
-    - Apps:
-        - Immich:
-            icon: si-immich
-            href: http://immich.lan/
-            description: Photo storage server
-            siteMonitor: http://immich-server.immich.svc.cluster.local:2283
-        - LGTM Stack:
-            icon: si-grafana
-            href: http://grafana.lan/
-            description: Cluster metrics
-            siteMonitor: http://prometheus-grafana.monitoring.svc.cluster.local
-        - Netbird:
-            icon: sh-netbird-light
-            href: https://netbird.mafmanhomelab.dedyn.io/
-            description: Mesh VPN
-            siteMonitor: https://netbird.mafmanhomelab.dedyn.io/
-        - NextCloud:
-            icon: si-nextcloud
-            href: http://cloud.lan/
-            description: NAS server
-            siteMonitor: http://nextcloud.nextcloud.svc.cluster.local:8080
+            statusStyle: 'dot'
+    - Networking:
         - PiHole:
-            icon: si-pihole
+            icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
             href: http://pihole.lan/admin
             description: DNS server / sinkhole filter
             siteMonitor: http://pihole-web.pihole.svc.cluster.local
+            statusStyle: 'dot'
+        - Netbird:
+            icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/netbird.png
+            href: https://netbird.mafmanhomelab.dedyn.io/
+            description: Mesh VPN
+            siteMonitor: https://netbird.mafmanhomelab.dedyn.io/
+            statusStyle: 'dot'
+    - Media:
+        - Immich:
+            icon: sh-immich
+            href: http://immich.lan/
+            description: Photo storage server
+            siteMonitor: http://immich-server.immich.svc.cluster.local:2283
+            statusStyle: 'dot'
+        - NextCloud:
+            icon: sh-nextcloud
+            href: http://cloud.lan/
+            description: NAS server
+            siteMonitor: http://nextcloud.nextcloud.svc.cluster.local:8080
+            statusStyle: 'dot'
+    - Utilities:
+        - LGTM Stack:
+            icon: sh-grafana
+            href: http://grafana.lan/
+            description: Cluster metrics
+            siteMonitor: http://prometheus-grafana.monitoring.svc.cluster.local
+            statusStyle: 'dot'
         - Mealie:
-            icon: si-mealie
+            icon: sh-mealie
             href: http://mealie.lan
             description: Recipe manager
             siteMonitor: http://mealie.mealie.svc.cluster.local:9000
+            statusStyle: 'dot'
         - ForgeJo:
-            icon: si-forgejo
+            icon: sh-forgejo
             href: http://git.lan
             description: Git server
             siteMonitor: http://forgejo-http.forgejo.svc.cluster.local:3000
+            statusStyle: 'dot'
   widgets.yaml: |
     - kubernetes:
         cluster:
@@ -69,7 +102,7 @@ data:
           cpu: true
           memory: true
           showLabel: true
-          label: "cluster"
+          label: "Cluster"
         nodes:
           show: true
           cpu: true
@@ -78,9 +111,10 @@ data:
     - resources:
         backend: resources
         expanded: true
-        cpu: true
-        memory: true
         network: default
+        cputemp: true
+        uptime: true
+        refresh: 1000
     - search:
         provider: duckduckgo
         target: _blank
