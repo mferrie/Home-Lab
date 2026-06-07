@@ -38,10 +38,17 @@ data:
   custom.css: ""
   custom.js: ""
   bookmarks.yaml: |
-    - Developer:
+    - Project:
         - Github:
             - icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/github-light.png
               href: https://github.com/mferrie
+    - Socials:
+        - Mastodon:
+            - icon: https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mastodon-icon.png
+              href: https://mastodon.social/@ferriematthew
+        - BlueSky:
+            - icon: https://logowik.com/content/uploads/images/bluesky-social5027.logowik.com.webp
+              href: https://bsky.app/profile/ferriematthew.bsky.social
   services.yaml: |
     - Infrastructure:
         - Longhorn:

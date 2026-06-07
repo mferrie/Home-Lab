@@ -6,11 +6,12 @@ metadata:
   labels:
     app.kubernetes.io/name: homepage
   annotations:
-    gethomepage.dev/description: Simple Homepage
+    gethomepage.dev/description: Dynamically Detected Homepage
     gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Cluster Management
-    gethomepage.dev/icon: si-homepage
+    gethomepage.dev/group: Utilities
+    gethomepage.dev/icon: sh-homepage
     gethomepage.dev/name: Homepage
+    gethomepage.dev/statusStyle: "dot"
 spec:
   rules:
     - host: "homepage.lan"
