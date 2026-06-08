@@ -45,7 +45,7 @@ spec:
                   name: pihole-webpassword
                   key: FTLCONF_webserver_api_password
             - name: FTLCONF_dns_upstreams
-              value: "8.8.8.8;8.8.4.4"
+              value: "1.1.1.1;1.0.0.1;208.67.222.222;208.67.220.220;"
             - name: FTLCONF_dns_listeningMode
               value: "all"
           volumeMounts:
