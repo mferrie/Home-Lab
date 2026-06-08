@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: homepage
 spec:
   revisionHistoryLimit: 3
-  replicas: 1
+  replicas: 2
   strategy:
     type: RollingUpdate
   selector:
@@ -18,6 +18,13 @@ spec:
       labels:
         app.kubernetes.io/name: homepage
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: homepage
+              topologyKey: kubernetes.io/hostname
       serviceAccountName: homepage
       automountServiceAccountToken: true
       dnsPolicy: ClusterFirst
