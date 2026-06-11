@@ -34,3 +34,16 @@ grafana:
     limits:
       memory: 512Mi
       cpu: 500m
+
+prometheus:
+  prometheusSpec:
+    retention: 3d
+    retentionSize: 512MB
+    resources:
+      limits:
+        memory: 1Gi
+      requests:
+        memory: 512Mi
+
+alertmanager:
+  enabled: false
