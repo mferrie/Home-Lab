@@ -1,0 +1,22 @@
+tempo:
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 2Gi
+    limits:
+      cpu: 2000m
+      memory: 4Gi
+
+  memBallastSizeMbs: 1024
+  reportingEnabled: false
+  metricsGenerator:
+    enabled: false
+    remoteWriteUrl: "http://prometheus.monitoring:9090/api/v1/write"
+
+persistence:
+  enabled: true
+  enableStatefulSetAutoDeletePVC: false
+  storageClassName: longhorn-ssd
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi

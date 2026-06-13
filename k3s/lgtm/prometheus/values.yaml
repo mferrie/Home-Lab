@@ -1,0 +1,59 @@
+prometheus:
+  prometheusSpec:
+    retention: 7d
+    retentionSize: 20GB
+
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: longhorn-ssd
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 20Gi
+
+    replicas: 1
+
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+    ruleSelectorNilUsesHelmValues: false
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 512Mi
+
+alertmanager:
+  alertmanagerSpec:
+    replicas: 1
+    storage:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: longhorn-ssd
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 2Gi
+
+grafana:
+  enabled: false
+
+prometheus-node-exporter:
+  resources:
+    requests:
+      cpu: 50m
+      memory: 50Mi
+
+kube-state-metrics:
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+
+kubeEtcd:
+  enabled: false
+
+kubeScheduler:
+  enabled: false
+kubeControllerManager:
+  enabled: false
