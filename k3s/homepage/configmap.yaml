@@ -40,9 +40,12 @@ data:
   custom.js: ""
   bookmarks.yaml: |
     - Project:
-        - Github:
-            - icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/github-light.png
-              href: https://github.com/mferrie
+        - CodeBerg:
+            - icon: sh-codeberg
+              href: https://codeberg.org/kaizenOramara_97
+        - GitLab:
+            - icon: sh-gitlab
+              href: https://gitlab.com/mferrie
     - Socials:
         - Mastodon:
             - icon: https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mastodon-icon.png
@@ -50,6 +53,18 @@ data:
         - BlueSky:
             - icon: https://logowik.com/content/uploads/images/bluesky-social5027.logowik.com.webp
               href: https://bsky.app/profile/ferriematthew.bsky.social
+        - MakerTube:
+            - icon: sh-peertube
+              href: https://makertube.net/a/kaizen_oramara_97/video-channels
+        - PixelFed:
+            - icon: sh-pixelfed
+              href: https://pixelfed.social/kaizenOramara_97
+        - Lemmy:
+            - icon: sh-lemmy
+              href: https://lemmy.ml/u/kaizenOramara_97
+        - Stoat:
+            - icon: sh-stoat
+              href: https://stoat.chat
   services.yaml: |
     - Infrastructure:
         - Longhorn:
@@ -62,7 +77,7 @@ data:
             icon: sh-grafana
             href: http://grafana.lan/
             description: Cluster metrics
-            siteMonitor: http://prometheus-grafana.monitoring.svc.cluster.local
+            siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
             statusStyle: 'dot'
     - Networking:
         - PiHole:
