@@ -72,51 +72,43 @@ data:
             href: http://longhorn.lan/
             description: Distributed block storage
             siteMonitor: http://longhorn-frontend.longhorn-system.svc.cluster.local
-            statusStyle: 'dot'
         - LGTM Stack:
             icon: sh-grafana
             href: http://grafana.lan/
             description: Cluster metrics
             siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
-            statusStyle: 'dot'
     - Networking:
         - PiHole:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
             href: http://pihole.lan/admin
             description: DNS server / sinkhole filter
             siteMonitor: http://pihole-web.pihole.svc.cluster.local
-            statusStyle: 'dot'
         - Netbird:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/netbird.png
             href: https://netbird.mafmanhomelab.dedyn.io/
             description: Mesh VPN
             siteMonitor: https://netbird.mafmanhomelab.dedyn.io/
-            statusStyle: 'dot'
     - Media:
         - Immich:
             icon: sh-immich
             href: http://immich.lan/
             description: Photo storage server
             siteMonitor: http://immich-server.immich.svc.cluster.local:2283
-            statusStyle: 'dot'
         - NextCloud:
             icon: sh-nextcloud
             href: http://cloud.lan/
             description: NAS server
             siteMonitor: http://nextcloud.nextcloud.svc.cluster.local:8080
-            statusStyle: 'dot'
         - Mealie:
             icon: sh-mealie
             href: http://mealie.lan
             description: Recipe manager
             siteMonitor: http://mealie.mealie.svc.cluster.local:9000
-            statusStyle: 'dot'
         - ForgeJo:
             icon: sh-forgejo
             href: http://git.lan
             description: Git server
             siteMonitor: http://forgejo-http.forgejo.svc.cluster.local:3000
-            statusStyle: 'dot'
   widgets.yaml: |
     - kubernetes:
         cluster:

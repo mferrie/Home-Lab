@@ -11,7 +11,6 @@ metadata:
     gethomepage.dev/group: "Infrastructure"
     gethomepage.dev/icon: sh-homepage
     gethomepage.dev/name: Homepage
-    gethomepage.dev/statusStyle: "dot"
 spec:
   rules:
     - host: "homepage.lan"
