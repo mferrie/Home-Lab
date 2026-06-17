@@ -11,7 +11,7 @@ tempo:
   reportingEnabled: false
   metricsGenerator:
     enabled: false
-    remoteWriteUrl: "http://prometheus.monitoring:9090/api/v1/write"
+    remoteWriteUrl: "http://prometheus-server.lgtm.svc.cluster.local/api/v1/write"
 
 persistence:
   enabled: true
