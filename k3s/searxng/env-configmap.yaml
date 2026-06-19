@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  labels:
-    io.kompose.service: core-env
-  name: env
-  namespace: searxng
