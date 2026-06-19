@@ -43,16 +43,16 @@ spec:
             path: /healthz
             port: 8080
             scheme: HTTP
-          periodSeconds: 10
-          timeoutSeconds: 30
+          periodSeconds: 30
+          timeoutSeconds: 60
         livenessProbe: 
           failureThreshold: 3
           httpGet:
             path: /healthz
             port: 8080
             scheme: HTTP
-          initialDelaySeconds: 15
-          periodSeconds: 20
+          initialDelaySeconds: 30
+          periodSeconds: 60
           successThreshold: 1
         ports:
         - containerPort: 8080
@@ -71,7 +71,7 @@ spec:
           privileged: false
           readOnlyRootFilesystem: true
           allowPrivilegeEscalation: false
-          procMount: DefaultProcMount
+          procMount: Default
           seccompProfile:
             type: RuntimeDefault
           capabilities:
