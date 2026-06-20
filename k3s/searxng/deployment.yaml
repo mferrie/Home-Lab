@@ -84,6 +84,8 @@ spec:
         volumeMounts:
         - mountPath: /etc/searxng
           name: searxng
+        - mountPath: /tmp
+          name: tmp
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
       restartPolicy: Always
@@ -91,4 +93,6 @@ spec:
       terminationGracePeriodSeconds: 30
       volumes:
       - name: searxng
+        emptyDir: {}
+      - name: tmp
         emptyDir: {}

@@ -77,6 +77,10 @@ data:
             href: http://grafana.lan/
             description: Cluster metrics
             siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
+        - SearXNG:
+            icon: sh-searxng
+            href: https://search.lan/
+            siteMonitor: http://searxng-service.searxng.svc.cluster.local:8080
     - Networking:
         - PiHole:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
@@ -130,7 +134,8 @@ data:
         uptime: true
         refresh: 1000
     - search:
-        provider: duckduckgo
+        provider: custom
+        url: https://search.lan
         target: _blank
   docker.yaml: ""
   proxmox.yaml: ""
