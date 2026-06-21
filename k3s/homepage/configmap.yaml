@@ -126,7 +126,7 @@ data:
         refresh: 1000
     - search:
         provider: custom
-        url: https://search.lan
+        url: https://search.lan/search?q=
         target: _blank
   docker.yaml: ""
   proxmox.yaml: ""
