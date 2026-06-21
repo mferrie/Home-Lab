@@ -1,46 +1,16 @@
-# Default values for dashy.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
-replicaCount: 1
-
 image:
-  repository: lissy93/dashy
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
+  # Override to latest stable version
   tag: "4.3"
 
-# Choose deployment strategy type
-strategyType: Recreate
+# Set name override
+nameOverride: "dashy"
+fullnameOverride: "dashy"
 
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
-
-serviceAccount:
-  # Specifies whether a service account should be created
-  create: true
-  # Automatically mount a ServiceAccount's API credentials?
-  automount: true
-  # Annotations to add to the service account
-  annotations: {}
-  # The name of the service account to use.
-  # If not set and create is true, a name is generated using the fullname template
-  name: ""
-
-podAnnotations: {}
-podLabels: {}
-
-probs:
-  failureThreshold: 3
-  timeoutSeconds: 10
-  periodSeconds: 90
-  initialDelaySeconds: 40
-  path: "/"
-
+# Necessary to allow pod to start
 podSecurityContext:
   fsGroup: 2000
 
+# Necessary to enable interaction with pod FS
 securityContext:
   capabilities:
     drop:
@@ -49,10 +19,7 @@ securityContext:
   runAsNonRoot: true
   runAsUser: 1000
 
-service:
-  type: ClusterIP
-  port: 8080
-
+# Make service accessible outside cluster
 ingress:
   enabled: true
   className: "traefik"
@@ -63,53 +30,17 @@ ingress:
         - path: /
           pathType: ImplementationSpecific
 
-resources:
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 2000m
-  #   memory: 4Gi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
+nodeSelector: {} # Might pin to nodes with higher compute later
 
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 10
-  targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
-
-# Additional volumes on the output Deployment definition.
-volumes: []
-
-# Additional volumeMounts on the output Deployment definition.
-volumeMounts: []
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
+affinity: {} # Not sure what to do with this yet
 
 env:
-  NODE_ENV: "production"
-  PORT: 8080
-  HOST: ""
+  HOST: "" # Fix an "incorrect host" bug
   BASE_URL: "/"
-  #VUE_APP_DOMAIN: ""
-  #INTEGRITY: ""
-  # -- Set this to the name of a secret to load environment variables from. If defined, values in the secret will override values in configs
-  existingSecret: ""
 
 static:
   # If set to true, configuration will be overwritten on every new releases.
   enabled: true
-
-  # -- Set this to the name of a secret to load configuration from. If defined, values in the secret will override values in configs
-  existingSecret: ""
 
   # Customize config.yaml https://github.com/Lissy93/dashy/blob/master/docs/configuring.md for more information.
   configMapContent:
