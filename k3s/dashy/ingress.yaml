@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dashy-ingress
+  namespace: dashy
+spec:
+  ingressClassName: traefik
+
+  rules:
+    - host: dashy.lan
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: dashy-svc
+                port:
+                  number: 8080

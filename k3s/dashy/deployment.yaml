@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashy
+  namespace: dashy
+  labels:
+    app: dashy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dashy
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: dashy
+    spec:
+      containers:
+        - name: dashy
+          image: lissy93/dashy:4.3.0
+          imagePullPolicy: IfNotPresent
+
+          env:
+            - name: NODE_ENV
+              value: production
+
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+
+          livenessProbe:
+            exec:
+              command:
+                - node
+                - /app/services/healthcheck.js
+            initialDelaySeconds: 30
+            timeoutSeconds: 10
+            periodSeconds: 90
+            failureThreshold: 3
+
+          volumeMounts:
+            - name: dashy-config
+              mountPath: /app/user-data/conf.yml
+              subPath: conf.yml
+
+      volumes:
+        - name: dashy-config
+          configMap:
+            name: dashy-config
