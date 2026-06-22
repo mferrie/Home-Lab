@@ -17,6 +17,8 @@ spec:
       labels:
         app: dashy
     spec:
+      securityContext:
+        fsGroup: 1000
       initContainers:
         - name: init-config
           image: busybox
