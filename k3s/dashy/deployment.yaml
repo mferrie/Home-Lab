@@ -17,19 +17,35 @@ spec:
       labels:
         app: dashy
     spec:
+      initContainers:
+        - name: init-config
+          image: busybox
+          command:
+            - sh
+            - -c
+            - |
+              if [ ! -f /data/conf.yml ]; then
+                cp /seed/conf.yml /data/conf.yml
+                echo "Config seeded."
+              else
+                echo "Config already exists, skipping."
+              fi
+          volumeMounts:
+            - name: dashy-config-pvc
+              mountPath: /data
+            - name: dashy-config-seed
+              mountPath: /seed
+
       containers:
         - name: dashy
           image: lissy93/dashy:4.3.0
           imagePullPolicy: IfNotPresent
-
           env:
             - name: NODE_ENV
               value: production
-
           ports:
             - containerPort: 8080
               protocol: TCP
-
           livenessProbe:
             exec:
               command:
@@ -39,13 +55,14 @@ spec:
             timeoutSeconds: 10
             periodSeconds: 90
             failureThreshold: 3
-
           volumeMounts:
-            - name: dashy-config
-              mountPath: /app/user-data/conf.yml
-              subPath: conf.yml
+            - name: dashy-config-pvc
+              mountPath: /app/user-data
 
       volumes:
-        - name: dashy-config
+        - name: dashy-config-pvc
+          persistentVolumeClaim:
+            claimName: dashy-config-pvc
+        - name: dashy-config-seed
           configMap:
             name: dashy-config
