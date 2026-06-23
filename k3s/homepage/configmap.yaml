@@ -129,31 +129,10 @@ data:
         provider: custom
         url: https://search.lan/search?q=
         target: _blank
-    - kubernetes:
-        cluster:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-          label: "Cluster"
-          expanded: true
-        nodes:
-          show: true
-          cpu: true
-          memory: true
-          showLabel: true
-          expanded: true
     - longhorn:
         expanded: true
         total: true
         labels: true
         nodes: true
-    - resources:
-        backend: resources
-        expanded: true
-        network: default
-        cputemp: true
-        uptime: true
-        refresh: 1000
   docker.yaml: ""
   proxmox.yaml: ""
