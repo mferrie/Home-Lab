@@ -1,0 +1,185 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: pihole
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pihole-config
+  namespace: pihole
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn-ssd
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pihole-dnsmasq
+  namespace: pihole
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn-ssd
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: pihole-webpassword
+  namespace: pihole
+spec:
+  encryptedData:
+    FTLCONF_webserver_api_password: AgBtuD3myKgNwDFyuPZFVGxQ44XrVo7zEtWS8/WlwLn4ny5lptpOBBk2+DfQ4MFILvn1CN072R1g8fBqlP3xG+ByWQQDE+NGpVwXKhcylvEBTC2lp+s/xiLfCOnt9r82jtBuFAAU8LzfVJgjVid4Rba8aEiJxg4bRCOSb5BOvzygZbvY1EUFejMIiUIHD9SSk6ZFghUTvR360mBzxj07dSJRkIFRbITXk7gpnB2sRjAAeWIHilorxqneztxbUsRJ9x9J/tChXhcnU3bAjqEM0BDyD6bu4l7mcoj6PTTg0lJYzQFTbHIhzYHDWcS35fxVgExR3/lDotQNxIJ6B0+UWTqvhvKlQ1MG6nPG7/F8YMddWsvV4PCZtipuVeNLwT54Ej2f/qYcWshGuyleTq+6VgQLiE9EUnDndCDkqWDNWNXCmWsiN1NG7SxXZOBd0RXWPuL44qn/7bOUhKPpmDtxqY2Gc3yZ+Bh/JPKRgbPo0J+o8z9zZxBbVT57CPDsNa/qjOcDixjPyXkziWINoSuNDEZ6vurVOpzdmFq6TjQX6uquIiiwBe+OEV5w0M35ePu77zNWen+VPBGs+eM4zc7/DgaR05eTlBk7DQqFW4BOCRbLxioOkPY5oPnh9cqw113Wv9NNRnnYT3R5dnzP75FMidt69et4hDggUYYHAfS6Tm50XcwkaOLoQ513c4o6XiJtvJp1V2j5E6vCj+KJ1w==
+  template:
+    metadata:
+      name: pihole-webpassword
+      namespace: pihole
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pihole-unbound
+  namespace: pihole
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pihole-unbound
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: pihole-unbound
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                  - arm64
+      containers:
+        - name: pihole-unbound
+          image: mpgirro/pihole-unbound:2026.06.0
+          ports:
+            - containerPort: 443
+              protocol: TCP
+            - containerPort: 53
+              protocol: TCP
+            - containerPort: 53
+              protocol: UDP
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: TZ
+              value: America/Chicago
+            - name: FTLCONF_webserver_api_password
+              valueFrom:
+                secretKeyRef:
+                  name: pihole-webpassword
+                  key: FTLCONF_webserver_api_password
+            - name: FTLCONF_dns_upstreams
+              value: 127.0.0.1#5335
+            - name: FTLCONF_dns_listeningMode
+              value: single
+            - name: FTLCONF_dns_dnssec
+              value: 'true'
+            - name: FTLCONF_dns_revServers
+              value: '1.1.1.1;1.0.0.1'
+          volumeMounts:
+            - mountPath: /etc/pihole
+              name: pihole-config
+            - mountPath: /etc/dnsmasq.d
+              name: pihole-dnsmasq
+          livenessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 5
+          readinessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+      volumes:
+        - name: pihole-config
+          persistentVolumeClaim:
+            claimName: pihole-config
+        - name: pihole-dnsmasq
+          persistentVolumeClaim:
+            claimName: pihole-dnsmasq
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pihole-dns
+  namespace: pihole
+  annotations:
+    metallb.io/loadBalancerIPs: 192.168.0.201
+spec:
+  type: LoadBalancer
+  selector:
+    app: pihole-unbound
+  ports:
+    - name: dns-tcp
+      port: 53
+      targetPort: 53
+      protocol: TCP
+    - name: dns-udp
+      port: 53
+      targetPort: 53
+      protocol: UDP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pihole-web
+  namespace: pihole
+spec:
+  type: ClusterIP
+  selector:
+    app: pihole-unbound
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pihole-web
+  namespace: pihole
+  annotations:
+    spec.ingressClassName: "traefik"
+spec:
+  rules:
+  - host: pihole.lan
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pihole-web
+            port:
+              number: 80
