@@ -80,12 +80,6 @@ data:
             description: Cluster metrics
             siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
             statusStyle: 'dot'
-        - SearXNG:
-            icon: sh-searxng
-            href: https://search.lan/
-            description: Private search engine
-            siteMonitor: http://searxng-service.searxng.svc.cluster.local:8080
-            statusStyle: 'dot'
     - Networking:
         - PiHole:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
@@ -95,7 +89,7 @@ data:
             statusStyle: 'dot'
         - Netbird:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/netbird.png
-            href: https://netbird.mafmanhomelab.dedyn.io/
+            href: thisSiteDoesNotExist
             description: Mesh VPN
             siteMonitor: https://netbird.mafmanhomelab.dedyn.io/
             statusStyle: 'dot'
@@ -120,9 +114,15 @@ data:
             statusStyle: 'dot'
         - ForgeJo:
             icon: sh-forgejo
-            href: http://git.lan
+            href: http://git.lan/
             description: Git server
             siteMonitor: http://forgejo-http.forgejo.svc.cluster.local:3000
+            statusStyle: 'dot'
+        - SearXNG:
+            icon: sh-searxng
+            href: https://search.lan/
+            description: Private search engine
+            siteMonitor: http://searxng-service.searxng.svc.cluster.local:8080
             statusStyle: 'dot'
   widgets.yaml: |
     - search:
