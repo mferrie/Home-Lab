@@ -91,7 +91,7 @@ spec:
             - name: FTLCONF_dns_upstreams
               value: 127.0.0.1#5335
             - name: FTLCONF_dns_listeningMode
-              value: single
+              value: all
             - name: FTLCONF_dns_dnssec
               value: 'true'
             - name: FTLCONF_dns_revServers
