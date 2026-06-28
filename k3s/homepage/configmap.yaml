@@ -87,6 +87,11 @@ data:
             description: DNS server / sinkhole filter
             siteMonitor: http://pihole-web.pihole.svc.cluster.local
             statusStyle: 'dot'
+            widget:
+              type: pihole
+              url: http://pihole.lan
+              key: '{{HOMEPAGE_VAR_PIHOLE_KEY}}'
+              version: 6
         - Netbird:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/netbird.png
             href: thisSiteDoesNotExist
@@ -100,24 +105,43 @@ data:
             description: Photo storage server
             siteMonitor: http://immich-server.immich.svc.cluster.local:2283
             statusStyle: 'dot'
+            widget:
+              type: immich
+              url: http://immich.lan
+              key: '{{HOMEPAGE_VAR_IMMICH_KEY}}'
+              version: 2
         - NextCloud:
             icon: sh-nextcloud
             href: http://cloud.lan/
             description: NAS server
             siteMonitor: http://nextcloud.nextcloud.svc.cluster.local:8080
             statusStyle: 'dot'
+            widget:
+              type: nextcloud
+              url: http://cloud.lan
+              username: '{{HOMEPAGE_VAR_NEXTCLOUD_USERNAME}}'
+              password: '{{HOMEPAGE_VAR_NEXTCLOUD_PASSWORD}}'
         - Mealie:
             icon: sh-mealie
             href: http://mealie.lan
             description: Recipe manager
             siteMonitor: http://mealie.mealie.svc.cluster.local:9000
             statusStyle: 'dot'
+            widget:
+              type: mealie
+              url: http://mealie.lan
+              key: '{{HOMEPAGE_VAR_MEALIE_KEY}}'
+              version: 2
         - ForgeJo:
             icon: sh-forgejo
             href: http://git.lan/
             description: Git server
             siteMonitor: http://forgejo-http.forgejo.svc.cluster.local:3000
             statusStyle: 'dot'
+            widget:
+              type: gitea
+              url: http://git.lan/
+              key: '{{HOMEPAGE_VAR_FORGEJO_KEY}}'
         - SearXNG:
             icon: sh-searxng
             href: https://search.lan/

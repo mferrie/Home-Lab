@@ -49,7 +49,37 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: "$(MY_POD_IP):3000,homepage.lan,localhost:3000" # See gethomepage.dev/installation/#homepage_allowed_hosts . Value before the comma is required for the k8s probe
+              value: "$(MY_POD_IP):3000,homepage.lan,localhost:3000"
+            - name: HOMEPAGE_VAR_PIHOLE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: pihole-key
+                  key: webpassword
+            - name: HOMEPAGE_VAR_IMMICH_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: immich-key
+                  key: key
+            - name: HOMEPAGE_VAR_FORGEJO_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: forgejo-key
+                  key: token
+            - name: HOMEPAGE_VAR_MEALIE_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: mealie-key
+                  key: token
+            - name: HOMEPAGE_VAR_NEXTCLOUD_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: nextcloud-key
+                  key: username
+            - name: HOMEPAGE_VAR_NEXTCLOUD_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: nextcloud-key
+                  key: password
           ports:
             - name: http
               containerPort: 3000
