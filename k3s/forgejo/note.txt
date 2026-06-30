@@ -1,0 +1,1 @@
+To update: helm install forgejo -n forgejo --create-namespace oci://codeberg.org/forgejo-contrib/forgejo -f values.yaml

@@ -1,0 +1,1 @@
+To update: helm install -n immich oci://ghcr.io/immich-app/immich-charts/immich -f values.yaml
