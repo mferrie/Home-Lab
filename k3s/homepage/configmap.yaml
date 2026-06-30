@@ -158,5 +158,17 @@ data:
         total: true
         labels: true
         nodes: true
+    - kubernetes:
+        cluster:
+            show: true
+            cpu: true
+            memory: true
+            showLabel: true
+            label: "cluster"
+        nodes:
+            show: true
+            cpu: true
+            memory: true
+            showLabel: true
   docker.yaml: ""
   proxmox.yaml: ""
