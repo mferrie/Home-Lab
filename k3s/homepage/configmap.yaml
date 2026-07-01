@@ -94,7 +94,7 @@ data:
               version: 6
         - Netbird:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/netbird.png
-            href: thisSiteDoesNotExist
+            href: https://netbird.mafmanhomelab.dedyn.io/
             description: Mesh VPN
             siteMonitor: https://netbird.mafmanhomelab.dedyn.io/
             statusStyle: 'dot'

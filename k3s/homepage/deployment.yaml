@@ -7,9 +7,9 @@ metadata:
     app.kubernetes.io/name: homepage
 spec:
   revisionHistoryLimit: 3
-  replicas: 2
+  replicas: 1
   strategy:
-    type: RollingUpdate
+    type: Recreate
   selector:
     matchLabels:
       app.kubernetes.io/name: homepage
