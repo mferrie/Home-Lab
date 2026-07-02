@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f compose.yml
+    kompose.version: 1.38.0 (a8f5d1cbd)
+  labels:
+    io.kompose.service: headscale
+  name: headscale
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: headscale
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f compose.yml
+        kompose.version: 1.38.0 (a8f5d1cbd)
+      labels:
+        io.kompose.service: headscale
+    spec:
+      containers:
+        - args:
+            - serve
+          image: docker.io/headscale/headscale:<VERSION>
+          livenessProbe:
+            exec:
+              command:
+                - headscale
+                - health
+          name: headscale
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+            - containerPort: 9090
+              protocol: TCP
+          securityContext:
+            readOnlyRootFilesystem: true
+          volumeMounts:
+            - mountPath: /etc/headscale
+              name: headscale-cm0
+              readOnly: true
+            - mountPath: /var/lib/headscale
+              name: headscale-claim1
+            - mountPath: /var/run/headscale
+              name: headscale-tmpfs0
+      restartPolicy: Always
+      volumes:
+        - configMap:
+            name: headscale-cm0
+          name: headscale-cm0
+        - name: headscale-claim1
+          persistentVolumeClaim:
+            claimName: headscale-claim1
+        - emptyDir:
+            medium: Memory
+          name: headscale-tmpfs0
