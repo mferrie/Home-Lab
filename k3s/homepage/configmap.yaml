@@ -134,6 +134,12 @@ data:
             description: Private search engine
             siteMonitor: http://searxng-service.searxng.svc.cluster.local:8080
             statusStyle: 'dot'
+        - Mealie:
+            icon: sh-mealie
+            href: http://mealie.lan
+            description: Recipe Manager
+            siteMonitor: http://mealie-web.mealie.svc.cluster.local:9925
+            statusStyle: 'dot'
   widgets.yaml: |
     - search:
         provider: custom
@@ -144,5 +150,14 @@ data:
         total: true
         labels: true
         nodes: true
+    - resources:
+        cpu: true
+        memory: true
+        cputemp: true
+        uptime: true
+        units: metric
+        refresh: 1000
+        network: true
+
   docker.yaml: ""
   proxmox.yaml: ""

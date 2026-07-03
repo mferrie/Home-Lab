@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mealie
+  namespace: mealie
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mealie
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: mealie
+    spec:
+      containers:
+        - env:
+            - name: ALLOW_SIGNUP
+              value: "false"
+            - name: BASE_URL
+              value: https://mealie.lan
+            - name: PGID
+              value: "1000"
+            - name: PUID
+              value: "1000"
+            - name: TZ
+              value: America/Chicago
+          image: ghcr.io/mealie-recipes/mealie:v3.20.1
+          name: mealie
+          ports:
+            - containerPort: 9000
+              protocol: TCP
+          resources:
+            limits:
+              memory: 1Gi
+          volumeMounts:
+            - mountPath: /app/data
+              name: mealie-data
+      restartPolicy: Always
+      volumes:
+        - name: mealie-data
+          persistentVolumeClaim:
+            claimName: mealie-data
