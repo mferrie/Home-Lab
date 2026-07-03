@@ -20,12 +20,12 @@ The architecture mismatch between the Raspberry Pis (ARM 64) and the laptop (AMD
 - Longhorn for distributed storage
 
 ## Screenshots
-![image ForgeJo](./Screenshots/forgejo.png)
-![image Grafana](./Screenshots/grafana.png)
-![image HomePage](./Screenshots/homepage.png)
-![image Immich](./Screenshots/immich.png)
-![image Longhorn](./Screenshots/longhorn.png)
-![image Mealie](./Screenshots/mealie.png)
-![image Netbird](./Screenshots/netbird.png)
-![image NextCloud](./Screenshots/nextcloud.png)
-![image PiHole](./Screenshots/pihole.png)
+![image ForgeJo](./Screenshots/Forgejo.png)
+![image Grafana (Namespace mode)](./Screenshots/Grafana-Namespaces.png)
+![image Grafana (Node mode)](./Screenshots/Grafana-Nodes.png)
+![image HomePage](./Screenshots/HomePage.png)
+![image Immich](./Screenshots/Immich.png)
+![image Longhorn](./Screenshots/Longhorn.png)
+![image NextCloud](./Screenshots/NextCloud.png)
+![image PiHole](./Screenshots/PiHole.png)
+![image SearXNG](./Screenshots/SearXNG.png)
