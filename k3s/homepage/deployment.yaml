@@ -65,11 +65,6 @@ spec:
                 secretKeyRef:
                   name: forgejo-key
                   key: token
-            - name: HOMEPAGE_VAR_MEALIE_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: mealie-key
-                  key: token
             - name: HOMEPAGE_VAR_NEXTCLOUD_USERNAME
               valueFrom:
                 secretKeyRef:

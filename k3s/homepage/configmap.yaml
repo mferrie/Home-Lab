@@ -47,6 +47,9 @@ data:
         - GitLab:
             - icon: sh-gitlab
               href: https://gitlab.com/mferrie
+        - GitHub:
+            - icon: si-github
+              href: https://github.com/mferrie
     - Socials:
         - Mastodon:
             - icon: https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/mastodon-icon.png
@@ -92,12 +95,6 @@ data:
               url: http://pihole.lan
               key: '{{HOMEPAGE_VAR_PIHOLE_KEY}}'
               version: 6
-        - Netbird:
-            icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/netbird.png
-            href: https://netbird.mafmanhomelab.dedyn.io/
-            description: Mesh VPN
-            siteMonitor: https://netbird.mafmanhomelab.dedyn.io/
-            statusStyle: 'dot'
     - Media:
         - Immich:
             icon: sh-immich
@@ -121,17 +118,6 @@ data:
               url: http://cloud.lan
               username: '{{HOMEPAGE_VAR_NEXTCLOUD_USERNAME}}'
               password: '{{HOMEPAGE_VAR_NEXTCLOUD_PASSWORD}}'
-        - Mealie:
-            icon: sh-mealie
-            href: http://mealie.lan
-            description: Recipe manager
-            siteMonitor: http://mealie.mealie.svc.cluster.local:9000
-            statusStyle: 'dot'
-            widget:
-              type: mealie
-              url: http://mealie.lan
-              key: '{{HOMEPAGE_VAR_MEALIE_KEY}}'
-              version: 2
         - ForgeJo:
             icon: sh-forgejo
             href: http://git.lan/
