@@ -5,3 +5,6 @@
 # Ignore NetBird config with sensitive info
 Docker/Pi4/netbird/config.yaml
 Docker/Pi4/netbird/crowdsec/
+
+# Ignore certificates for Headscale
+Docker/Pi4/headscale/lib/
