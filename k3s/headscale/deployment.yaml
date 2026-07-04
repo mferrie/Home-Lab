@@ -30,8 +30,8 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
-            - containerPort: 9090
-              protocol: TCP
+            - containerPort: 3478
+              protocol: UDP
           securityContext:
             readOnlyRootFilesystem: true
           volumeMounts:
