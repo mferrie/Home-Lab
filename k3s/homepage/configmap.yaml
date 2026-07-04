@@ -95,6 +95,12 @@ data:
               url: http://pihole.lan
               key: '{{HOMEPAGE_VAR_PIHOLE_KEY}}'
               version: 6
+        - Headscale:
+            icon: sh-headscale
+            href: https://headscale.mafmanhomelab.dedyn.io
+            description: VPN
+            siteMonitor: https://headscale.headscale.svc.cluster.local:443
+            statusStyle: 'dot'
     - Media:
         - Immich:
             icon: sh-immich
