@@ -10,12 +10,12 @@
 #
 # https://myheadscale.example.com:443
 #
-server_url: http://headscale.mafmanhomelab.dedyn.io:8080
+server_url: https://headscale.mafmanhomelab.dedyn.io:8443
 
 # Address to listen to / bind to on the server
 #
 # For production:
-listen_addr: 0.0.0.0:8080
+listen_addr: 0.0.0.0:8443
 # listen_addr: 127.0.0.1:8080
 
 # Address to listen to /metrics and /debug, you may want
@@ -30,8 +30,8 @@ metrics_listen_addr: 127.0.0.1:9090
 # valid certificates.
 #
 # For production:
-# grpc_listen_addr: 0.0.0.0:50443
-grpc_listen_addr: 127.0.0.1:50443
+grpc_listen_addr: 0.0.0.0:50443
+# grpc_listen_addr: 127.0.0.1:50443
 
 # Allow the gRPC admin interface to run in INSECURE
 # mode. This is not recommended as the traffic will
