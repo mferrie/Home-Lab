@@ -99,7 +99,7 @@ data:
             icon: sh-headscale
             href: https://headscale.mafmanhomelab.dedyn.io
             description: VPN
-            siteMonitor: https://headscale.headscale.svc.cluster.local:443
+            siteMonitor: http://headscale.headscale.svc.cluster.local:8080
             statusStyle: 'dot'
     - Media:
         - Immich:

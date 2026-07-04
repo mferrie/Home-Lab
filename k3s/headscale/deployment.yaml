@@ -28,7 +28,7 @@ spec:
                 - health
           name: headscale
           ports:
-            - containerPort: 80
+            - containerPort: 8080
               protocol: TCP
             - containerPort: 443
               protocol: TCP
