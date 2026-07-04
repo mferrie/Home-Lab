@@ -1,9 +1,8 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  labels:
-    io.kompose.service: headscale-claim1
-  name: headscale-claim1
+  name: headscale-claim
+  namespace: headscale
 spec:
   accessModes:
     - ReadWriteOnce

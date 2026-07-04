@@ -10,13 +10,13 @@
 #
 # https://myheadscale.example.com:443
 #
-server_url: http://127.0.0.1:8080
+server_url: https://headscale.mafmanhomelab.dedyn.io:8080
 
 # Address to listen to / bind to on the server
 #
 # For production:
 # listen_addr: 0.0.0.0:8080
-listen_addr: 127.0.0.1:8080
+listen_addr: 0.0.0.0:8080
 
 # Address to listen to /metrics and /debug, you may want
 # to keep this endpoint private to your internal network
@@ -30,8 +30,8 @@ metrics_listen_addr: 127.0.0.1:9090
 # valid certificates.
 #
 # For production:
-# grpc_listen_addr: 0.0.0.0:50443
-grpc_listen_addr: 127.0.0.1:50443
+grpc_listen_addr: 0.0.0.0:50443
+#grpc_listen_addr: 127.0.0.1:50443
 
 # Allow the gRPC admin interface to run in INSECURE
 # mode. This is not recommended as the traffic will
@@ -256,10 +256,10 @@ database:
 acme_url: https://acme-v02.api.letsencrypt.org/directory
 
 # Email to register with ACME provider
-acme_email: ""
+acme_email: "ferriematth@gmail.com"
 
 # Domain name to request a TLS certificate for:
-tls_letsencrypt_hostname: ""
+tls_letsencrypt_hostname: "headscale.mafmanhomelab.dedyn.io"
 
 # Path to store certificates and metadata needed by
 # letsencrypt
@@ -327,7 +327,7 @@ dns:
   # `base_domain` must be a FQDN, without the trailing dot.
   # The FQDN of the hosts will be
   # `hostname.base_domain` (e.g., _myhost.example.com_).
-  base_domain: example.com
+  base_domain: headscale.internal
 
   # Whether to use the local DNS settings of a node or override the local DNS
   # settings (default) and force the use of Headscale's DNS configuration.

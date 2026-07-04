@@ -1,4 +1,8 @@
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: headscale-configmap
+  namespace: headscale
 data:
   config.yaml: |
     ---
@@ -13,13 +17,13 @@ data:
     #
     # https://myheadscale.example.com:443
     #
-    server_url: http://127.0.0.1:8080
+    server_url: https://headscale.mafmanhomelab.dedyn.io:8080
 
     # Address to listen to / bind to on the server
     #
     # For production:
-    # listen_addr: 0.0.0.0:8080
-    listen_addr: 127.0.0.1:8080
+    listen_addr: 0.0.0.0:8080
+    # listen_addr: 127.0.0.1:8080
 
     # Address to listen to /metrics and /debug, you may want
     # to keep this endpoint private to your internal network
@@ -259,10 +263,10 @@ data:
     acme_url: https://acme-v02.api.letsencrypt.org/directory
 
     # Email to register with ACME provider
-    acme_email: ""
+    acme_email: "ferriematth@gmail.com"
 
     # Domain name to request a TLS certificate for:
-    tls_letsencrypt_hostname: ""
+    tls_letsencrypt_hostname: "headscale.mafmanhomelab.dedyn.io"
 
     # Path to store certificates and metadata needed by
     # letsencrypt
@@ -495,8 +499,3 @@ data:
     #   #
     #   # node_store_batch_size: 100
     #   # node_store_batch_timeout: 500ms
-kind: ConfigMap
-metadata:
-  labels:
-    io.kompose.service: headscale
-  name: headscale-cm0

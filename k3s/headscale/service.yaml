@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: headscale
+  name: headscale
+  namespace: headscale
+spec:
+  selector:
+    app: headscale
+  ports:
+    - name: "https"
+      port: 8080
+      targetPort: 8080
+    - name: "stun"
+      port: 9090
+      targetPort: 9090
