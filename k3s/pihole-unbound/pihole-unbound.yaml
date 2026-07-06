@@ -71,6 +71,7 @@ spec:
       containers:
         - name: pihole-unbound
           image: mpgirro/pihole-unbound:2026.06.0
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 443
               protocol: TCP
