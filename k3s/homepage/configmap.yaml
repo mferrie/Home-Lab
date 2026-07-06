@@ -84,10 +84,10 @@ data:
             siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
             statusStyle: 'dot'
         - ArgoCD:
-            icon: sh-argocd
+            icon: sh-argo-cd
             href: https://argocd.lan/
             description: GitOps
-            siteMonitor: http://argocd-server.argocd.svc.cluster.local:80
+            siteMonitor: https://argocd-server.argocd.svc.cluster.local:80
             statusStyle: 'dot'
     - Networking:
         - PiHole:
