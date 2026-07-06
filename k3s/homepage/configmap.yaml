@@ -83,6 +83,12 @@ data:
             description: Cluster metrics
             siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
             statusStyle: 'dot'
+        - ArgoCD:
+            icon: sh-argocd
+            href: https://argocd.lan/
+            description: GitOps
+            siteMonitor: http://argocd-server.argocd.svc.cluster.local:80
+            statusStyle: 'dot'
     - Networking:
         - PiHole:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
