@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencryptcertmanager # Or your certificate issuer
+  name: wg-easy
+  namespace: wg-easy
+spec:
+  ingressClassName: traefik
+  rules:
+    - host: wg.mafmanhomelab.dedyn.io
+      http:
+        paths:
+          - backend:
+              service:
+                name: wg-easy-http
+                port: 
+                  name: http
+            path: /
+            pathType: Prefix
+  tls:
+    - hosts:
+        - wg.mafmanhomelab.dedyn.io
+      secretName: wg-mafmanhomelab-dedyn-io-tls
