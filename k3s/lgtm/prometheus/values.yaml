@@ -572,7 +572,7 @@ server:
 
     ## Prometheus server data Persistent Volume size
     ##
-    size: 8Gi
+    size: 16Gi
 
     ## Prometheus server data Persistent Volume Storage Class
     ## If defined, storageClassName: <storageClass>
@@ -811,7 +811,7 @@ server:
 
   ## Prometheus' data retention size. Supported units: B, KB, MB, GB, TB, PB, EB.
   ##
-  retentionSize: ""
+  retentionSize: "14GB"
 
 ## scrapeConfigs (map) defines Prometheus' default scrape_configs.
 ## Each can be disabled by setting "enabled" to "false" or leaving it empty. The key sets the default "job_name".
