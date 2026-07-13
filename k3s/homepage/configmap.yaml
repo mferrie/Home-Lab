@@ -11,7 +11,7 @@ data:
   settings.yaml: |
     providers:
       longhorn:
-        url: https://longhorn.lan
+        url: https://longhorn.internal
     title: Local Cloud
     description: Making Big Tech obsolete
     background:
@@ -73,83 +73,83 @@ data:
     - Infrastructure:
         - Longhorn:
             icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/rancher-longhorn.png
-            href: http://longhorn.lan/
+            href: http://longhorn.internal/
             description: Distributed block storage
             siteMonitor: http://longhorn-frontend.longhorn-system.svc.cluster.local
             statusStyle: 'dot'
         - LGTM Stack:
             icon: sh-grafana
-            href: http://grafana.lan/
+            href: http://grafana.internal/
             description: Cluster metrics
             siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
             statusStyle: 'dot'
         - ArgoCD:
             icon: sh-argo-cd
-            href: https://argocd.lan/
+            href: https://argocd.internal/
             description: GitOps
             siteMonitor: https://argocd-server.argocd.svc.cluster.local:80
             statusStyle: 'dot'
     - Networking:
         - PiHole:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
-            href: http://pihole.lan/admin
+            href: http://pihole.internal/admin
             description: DNS server / sinkhole filter
             siteMonitor: http://pihole-web.pihole.svc.cluster.local
             statusStyle: 'dot'
             widget:
               type: pihole
-              url: http://pihole.lan
+              url: http://pihole.internal
               key: '{{HOMEPAGE_VAR_PIHOLE_KEY}}'
               version: 6
     - Media:
         - Immich:
             icon: sh-immich
-            href: http://immich.lan/
+            href: http://immich.internal/
             description: Photo storage server
             siteMonitor: http://immich-server.immich.svc.cluster.local:2283
             statusStyle: 'dot'
             widget:
               type: immich
-              url: http://immich.lan
+              url: http://immich.internal
               key: '{{HOMEPAGE_VAR_IMMICH_KEY}}'
               version: 2
         - NextCloud:
             icon: sh-nextcloud
-            href: http://cloud.lan/
+            href: http://cloud.internal/
             description: NAS server
             siteMonitor: http://nextcloud.nextcloud.svc.cluster.local:8080
             statusStyle: 'dot'
             widget:
               type: nextcloud
-              url: http://cloud.lan
+              url: http://cloud.internal
               username: '{{HOMEPAGE_VAR_NEXTCLOUD_USERNAME}}'
               password: '{{HOMEPAGE_VAR_NEXTCLOUD_PASSWORD}}'
         - ForgeJo:
             icon: sh-forgejo
-            href: http://git.lan/
+            href: http://git.internal/
             description: Git server
             siteMonitor: http://forgejo-http.forgejo.svc.cluster.local:3000
             statusStyle: 'dot'
             widget:
               type: gitea
-              url: http://git.lan/
+              url: http://git.internal/
               key: '{{HOMEPAGE_VAR_FORGEJO_KEY}}'
         - SearXNG:
             icon: sh-searxng
-            href: https://search.lan/
+            href: https://search.internal/
             description: Private search engine
             siteMonitor: http://searxng-service.searxng.svc.cluster.local:8080
             statusStyle: 'dot'
         - Mealie:
             icon: sh-mealie
-            href: http://mealie.lan
+            href: http://mealie.internal
             description: Recipe Manager
             siteMonitor: http://mealie-web.mealie.svc.cluster.local:9925
             statusStyle: 'dot'
   widgets.yaml: |
     - search:
         provider: custom
-        url: https://search.lan/search?q=
+        url: https://search.internal/search?q=
         target: _blank
     - longhorn:
         expanded: true

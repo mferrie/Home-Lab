@@ -396,7 +396,7 @@ server:
     ## Must be provided if Ingress is enabled
     ##
     hosts:
-      - prometheus.lan
+      - prometheus.internal
 
     path: /
 

@@ -175,7 +175,7 @@ ingress:
   className:
   annotations:
   hosts:
-    - host: git.lan
+    - host: git.internal
       paths:
         - path: /
           pathType: Prefix

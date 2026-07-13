@@ -49,7 +49,7 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
             - name: HOMEPAGE_ALLOWED_HOSTS
-              value: "$(MY_POD_IP):3000,homepage.lan,localhost:3000"
+              value: "$(MY_POD_IP):3000,homepage.internal,localhost:3000"
             - name: HOMEPAGE_VAR_PIHOLE_KEY
               valueFrom:
                 secretKeyRef:

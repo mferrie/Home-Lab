@@ -13,7 +13,7 @@ metadata:
     gethomepage.dev/name: Homepage
 spec:
   rules:
-    - host: "homepage.lan"
+    - host: "homepage.internal"
       http:
         paths:
           - path: "/"

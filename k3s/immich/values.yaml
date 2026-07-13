@@ -97,7 +97,7 @@ server:
       enabled: true
       annotations:
       hosts:
-        - host: immich.lan
+        - host: immich.internal
           paths:
             - path: "/"
               service:

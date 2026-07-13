@@ -4,10 +4,10 @@ loadBalancerIP: 192.168.0.200
 ingress:
   enabled: true
   hosts:
-  - host: cloud.lan
+  - host: cloud.internal
     paths:
       - /
 nextcloud:
-  host: cloud.lan
+  host: cloud.internal
   username: admin
   password: changeMe
