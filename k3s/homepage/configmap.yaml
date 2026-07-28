@@ -83,6 +83,12 @@ data:
             description: Cluster metrics
             siteMonitor: http://grafana.lgtm.svc.cluster.local:3000
             statusStyle: 'dot'
+        - Prometheus:
+            icon: sh-prometheus
+            href: http://prometheus.internal/
+            description: Device Metrics
+            siteMonitor: http://prometheus.lgtm.svc.cluster.local:9090
+            statusStyle: 'dot'
         - ArgoCD:
             icon: sh-argo-cd
             href: https://argocd.internal/
