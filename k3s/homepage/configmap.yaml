@@ -87,7 +87,7 @@ data:
             icon: sh-prometheus
             href: http://prometheus.internal/
             description: Device Metrics
-            siteMonitor: http://prometheus.lgtm.svc.cluster.local:9090
+            siteMonitor: http://prometheus.lgtm.svc.cluster.local:9100
             statusStyle: 'dot'
         - ArgoCD:
             icon: sh-argo-cd
