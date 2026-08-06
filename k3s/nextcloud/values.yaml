@@ -27,16 +27,17 @@ nextcloud:
   persistence:
     subPath:
   # if set, we'll template this list to the NEXTCLOUD_TRUSTED_DOMAINS env var
-  trustedDomains: []
+  trustedDomains:
+    - "10.42.*.*"
   ## SMTP configuration
   mail:
     enabled: false
     # the user we send email as
     fromAddress: user
     # the domain we send email from
-    domain: domain.com
+    domain: cloud.internal
     smtp:
-      host: domain.com
+      host: cloud.internal
       secure: ssl
       port: 465
       authtype: LOGIN
