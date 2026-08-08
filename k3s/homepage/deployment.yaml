@@ -59,7 +59,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: immich-key
-                  key: key
+                  key: apikey
             - name: HOMEPAGE_VAR_FORGEJO_KEY
               valueFrom:
                 secretKeyRef:
