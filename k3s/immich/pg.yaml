@@ -6,6 +6,24 @@ metadata:
 spec:
   instances: 1
 
+  resources:
+    requests:
+      cpu: 250m
+      memory: 512Mi
+    limits:
+      cpu: "1"
+      memory: 1Gi
+
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 100
+          preference:
+            matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: NotIn
+                values: ["pi-3"]
+
   storage:
     size: 10Gi
 
@@ -17,8 +35,6 @@ spec:
 
   bootstrap:
     initdb:
-      # TODO: Use managed extensions (pg 18)
       postInitApplicationSQL:
-        # Commands based on: https://immich.app/docs/administration/postgres-standalone/#without-superuser-permission
         - CREATE EXTENSION vchord CASCADE;
         - CREATE EXTENSION earthdistance CASCADE;
