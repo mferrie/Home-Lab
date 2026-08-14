@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: vaultwarden-claim0
+    namespace: vaultwarden
+    labels:
+        app: vaultwarden
+spec:
+    storageClass: longhorn-ssd
+    accessModes:
+        - ReadWriteOnce
+    resources:
+        requests:
+            storage: 100Mi

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vaultwarden
+  namespace: vaultwarden
+  labels:
+    app: vaultwarden
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vaultwarden
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f compose.yml
+        kompose.version: 1.38.0 (HEAD)
+      labels:
+        io.kompose.service: vaultwarden
+    spec:
+      containers:
+        - env:
+            - name: DOMAIN
+              value: https://vaultwarden.mafmanhomelab.dedyn.io
+          image: vaultwarden/server:latest
+          name: vaultwarden
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /data
+              name: vaultwarden-claim0
+      restartPolicy: Always
+      volumes:
+        - name: vaultwarden-claim0
+          persistentVolumeClaim:
+            claimName: vaultwarden-claim0
