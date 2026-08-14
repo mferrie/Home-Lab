@@ -1,24 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vaultwarden
-  namespace: vaultwarden
-  labels:
-    app: vaultwarden
+    name: vaultwarden
+    namespace: vaultwarden
+    labels:
+        app: vaultwarden
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: vaultwarden
-  strategy:
-    type: Recreate
-  template:
-    metadata:
-      annotations:
-        kompose.cmd: kompose convert -f compose.yml
-        kompose.version: 1.38.0 (HEAD)
-      labels:
-        io.kompose.service: vaultwarden
+    replicas: 1
+    selector:
+        matchLabels:
+        app: vaultwarden
+    strategy:
+        type: Recreate
+    template:
+        metadata:
+                labels:
+                    app: vaultwarden
     spec:
       containers:
         - env:
