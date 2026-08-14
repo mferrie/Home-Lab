@@ -3,8 +3,9 @@ kind: Service
 metadata:
   name: vaultwarden
   namespace: vaultwarden
+  annotations:
+    metallb.io/LoadBalancerIPs: 192.168.0.203
 spec:
-  loadBalancerIP: 192.168.0.203
   selector:
     app: vaultwarden
   ports:
