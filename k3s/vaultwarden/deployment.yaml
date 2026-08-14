@@ -21,16 +21,16 @@ spec:
       - env:
         - name: DOMAIN
           value: https://vaultwarden.mafmanhomelab.dedyn.io
-      image: vaultwarden/server:latest
-      name: vaultwarden
-      ports:
-      - containerPort: 80
-        protocol: TCP
-      volumeMounts:
-      - mountPath: /data
-        name: vaultwarden-claim0
-      restartPolicy: Always
-      volumes:
-      - name: vaultwarden-claim0
-        persistentVolumeClaim:
-        claimName: vaultwarden-claim0
+        image: vaultwarden/server:latest
+        name: vaultwarden
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        volumeMounts:
+        - mountPath: /data
+          name: vaultwarden-claim0
+        restartPolicy: Always
+        volumes:
+        - name: vaultwarden-claim0
+          persistentVolumeClaim:
+            claimName: vaultwarden-claim0
