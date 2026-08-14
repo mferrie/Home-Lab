@@ -6,7 +6,7 @@ metadata:
     labels:
         app: vaultwarden
 spec:
-    storageClass: longhorn-ssd
+    storageClassName: longhorn-ssd
     accessModes:
         - ReadWriteOnce
     resources:
