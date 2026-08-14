@@ -1,36 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: vaultwarden
-    namespace: vaultwarden
-    labels:
-        app: vaultwarden
+  name: vaultwarden
+  namespace: vaultwarden
+  labels:
+    app: vaultwarden
 spec:
-    replicas: 1
-    selector:
-        matchLabels:
-            app: vaultwarden
-    strategy:
-        type: Recreate
-    template:
-        metadata:
-            labels:
-                app: vaultwarden
-        spec:
-            containers:
-                - env:
-                    - name: DOMAIN
-                    value: https://vaultwarden.mafmanhomelab.dedyn.io
-                image: vaultwarden/server:latest
-                name: vaultwarden
-                ports:
-                    - containerPort: 80
-                    protocol: TCP
-                volumeMounts:
-                    - mountPath: /data
-                    name: vaultwarden-claim0
-            restartPolicy: Always
-            volumes:
-                - name: vaultwarden-claim0
-                persistentVolumeClaim:
-                    claimName: vaultwarden-claim0
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vaultwarden
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: vaultwarden
+    spec:
+      containers:
+      - env:
+        - name: DOMAIN
+          value: https://vaultwarden.mafmanhomelab.dedyn.io
+      image: vaultwarden/server:latest
+      name: vaultwarden
+      ports:
+      - containerPort: 80
+        protocol: TCP
+      volumeMounts:
+      - mountPath: /data
+        name: vaultwarden-claim0
+      restartPolicy: Always
+      volumes:
+      - name: vaultwarden-claim0
+        persistentVolumeClaim:
+        claimName: vaultwarden-claim0
