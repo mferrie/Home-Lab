@@ -7,7 +7,7 @@ metadata:
     app.kubernetes.io/name: vaultwarden
 spec:
   rules:
-    - host: "vaultwarden.mafmanhomelab.dedyn.io"
+    - host: "http://vaultwarden.mafmanhomelab.dedyn.io"
       http:
         paths:
           - path: "/"
