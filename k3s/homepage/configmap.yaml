@@ -100,7 +100,7 @@ data:
             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
             href: http://pihole.internal/admin
             description: DNS server / sinkhole filter
-            siteMonitor: http://pihole-web.pihole.svc.cluster.local
+            siteMonitor: http://pihole-web.pihole.svc.cluster.local:8000
             statusStyle: 'dot'
             widget:
               type: pihole
