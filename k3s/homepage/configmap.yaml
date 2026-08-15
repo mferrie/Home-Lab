@@ -107,6 +107,12 @@ data:
               url: http://pihole.internal
               key: '{{HOMEPAGE_VAR_PIHOLE_KEY}}'
               version: 6
+        - VaultWarden:
+            icon: sh-vaultwarden
+            href: https://vaultwarden.mafmanhomelab.dedyn.io/
+            description: Self-hosted password manager
+            siteMonitor: http://vaultwarden.vaultwarden.svc.cluster.local
+            statusStyle: 'dot'
     - Media:
         - Immich:
             icon: sh-immich
