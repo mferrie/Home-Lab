@@ -5,6 +5,8 @@ metadata:
   namespace: vaultwarden
   annotations:
     metallb.io/LoadBalancerIPs: 192.168.0.204
+  labels:
+    app: vaultwarden
 spec:
   selector:
     app: vaultwarden
