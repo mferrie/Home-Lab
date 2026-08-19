@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f compose.yml
+    kompose.version: 1.38.0 (a8f5d1cbd)
+  labels:
+    io.kompose.service: app
+  name: app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: app
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f compose.yml
+        kompose.version: 1.38.0 (a8f5d1cbd)
+      labels:
+        io.kompose.service: app
+    spec:
+      containers:
+        - env:
+            - name: APP_BASE_URL
+              value: joplin.internal
+            - name: APP_PORT
+              value: "22300"
+            - name: DB_CLIENT
+              value: pg
+            - name: POSTGRES_DATABASE
+              value: joplin
+            - name: POSTGRES_DBPASSWORD
+              value: joplin
+            - name: POSTGRES_HOST
+              value: db
+            - name: POSTGRES_PORT
+              value: "5432"
+            - name: POSTGRES_USER
+              value: joplin
+          image: joplin/server:latest
+          name: app
+          ports:
+            - containerPort: 22300
+              protocol: TCP
+      restartPolicy: Always
