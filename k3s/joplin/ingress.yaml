@@ -20,6 +20,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: joplin
+                name: app
                 port:
                   number: 22300
