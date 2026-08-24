@@ -39,3 +39,20 @@ spec:
             - containerPort: 22300
               protocol: TCP
       restartPolicy: Always
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: app
+  namespace: joplin
+  labels:
+    app: app
+spec:
+  ports:
+    - name: "http"
+      port: 22300
+      targetPort: 22300
+  selector:
+    app: app
