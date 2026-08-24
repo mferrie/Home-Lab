@@ -22,9 +22,15 @@ spec:
             - name: POSTGRES_DB
               value: joplin
             - name: POSTGRES_PASSWORD
-              value: joplin
+              valueFrom:
+                secretKeyRef:
+                    name: joplin-database
+                    key: postgres_pw
             - name: POSTGRES_USER
-              value: joplin
+              valueFrom:
+                secretKeyRef:
+                    name: joplin-database
+                    key: postgres_user
             - name: PGDATA
               value: /var/lib/postgresql/data/pgdata
           image: postgres:16

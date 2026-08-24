@@ -26,13 +26,19 @@ spec:
             - name: POSTGRES_DATABASE
               value: joplin
             - name: POSTGRES_DBPASSWORD
-              value: joplin
+              valueFrom:
+                secretKeyRef:
+                    name: joplin-database
+                    key: postgres_pw
             - name: POSTGRES_HOST
               value: db
             - name: POSTGRES_PORT
               value: "5432"
             - name: POSTGRES_USER
-              value: joplin
+              valueFrom:
+                secretKeyRef:
+                    name: joplin-database
+                    key: postgres_user
           image: joplin/server:latest
           name: app
           ports:
