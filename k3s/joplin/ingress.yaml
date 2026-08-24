@@ -11,7 +11,7 @@ metadata:
     gethomepage.dev/group: "Media"
     gethomepage.dev/icon: sh-joplin
     gethomepage.dev/name: Joplin
-    gethomepage.dev/href: http://joplin.internal/home/
+    gethomepage.dev/href: http://joplin.internal/
     gethomepage.dev/siteMonitor: http://app.joplin.svc.cluster.local:22300
 spec:
   rules:
