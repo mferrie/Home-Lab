@@ -25,6 +25,8 @@ spec:
               value: joplin
             - name: POSTGRES_USER
               value: joplin
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
           image: postgres:16
           name: db
           ports:
