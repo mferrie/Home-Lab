@@ -13,7 +13,7 @@ metadata:
     gethomepage.dev/name: Joplin
 spec:
   rules:
-    - host: "http://joplin.internal"
+    - host: "joplin.internal"
       http:
         paths:
           - path: "/"
