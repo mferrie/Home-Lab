@@ -1,16 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f compose.yml
-    kompose.version: 1.38.0 (a8f5d1cbd)
-  labels:
-    io.kompose.service: app
   name: app
+  namespace: joplin
+  labels:
+    app: app
 spec:
   ports:
-    - name: "22300"
+    - name: "http"
       port: 22300
       targetPort: 22300
   selector:
-    io.kompose.service: app
+    app: app
