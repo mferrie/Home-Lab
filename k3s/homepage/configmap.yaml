@@ -158,7 +158,7 @@ data:
             description: Recipe Manager
             siteMonitor: http://mealie-web.mealie.svc.cluster.local:9925
             statusStyle: 'dot'
-        - Joplin
+        - Joplin:
             icon: sh-joplin
             href: http://joplin.internal
             description: Notes Manager
