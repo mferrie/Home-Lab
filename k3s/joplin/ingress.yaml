@@ -5,14 +5,6 @@ metadata:
   namespace: joplin
   labels:
     app: joplin
-  annotations:
-    gethomepage.dev/description: Self-Hosted Notes
-    gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: "Media"
-    gethomepage.dev/icon: sh-joplin
-    gethomepage.dev/name: Joplin
-    gethomepage.dev/href: http://joplin.internal/
-    gethomepage.dev/siteMonitor: http://app.joplin.svc.cluster.local:22300
 spec:
   rules:
     - host: "joplin.internal"
