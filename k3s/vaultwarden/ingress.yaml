@@ -5,6 +5,8 @@ metadata:
   namespace: vaultwarden
   labels:
     app: vaultwarden
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   tls:
     - hosts:
