@@ -25,7 +25,7 @@ spec:
               value: pg
             - name: POSTGRES_DATABASE
               value: joplin
-            - name: POSTGRES_DBPASSWORD
+            - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
                     name: joplin-database
