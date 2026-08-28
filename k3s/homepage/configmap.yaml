@@ -111,7 +111,7 @@ data:
             icon: sh-vaultwarden
             href: https://vaultwarden.mafmanhomelab.dedyn.io/
             description: Self-hosted password manager
-            siteMonitor: https://vaultwarden.vaultwarden.svc.cluster.local
+            siteMonitor: http://vaultwarden.vaultwarden.svc.cluster.local
             statusStyle: 'dot'
     - Media:
         - Immich:
