@@ -5,7 +5,13 @@ metadata:
   namespace: vaultwarden
   labels:
     app: vaultwarden
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
+  tls:
+    - hosts:
+        - "vaultwarden.mafmanhomelab.dedyn.io"
+      secretName: vaultwarden-tls
   rules:
     - host: "vaultwarden.mafmanhomelab.dedyn.io"
       http:

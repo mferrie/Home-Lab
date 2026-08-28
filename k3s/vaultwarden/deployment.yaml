@@ -23,7 +23,7 @@ spec:
           image: vaultwarden/server:latest
           env:
             - name: DOMAIN
-              value: http://vaultwarden.mafmanhomelab.dedyn.io
+              value: https://vaultwarden.mafmanhomelab.dedyn.io
           ports:
             - containerPort: 80
               protocol: TCP
