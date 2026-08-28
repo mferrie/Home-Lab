@@ -6,6 +6,10 @@ metadata:
   labels:
     app: vaultwarden
 spec:
+  tls:
+    - hosts:
+        - "vaultwarden.mafmanhomelab.dedyn.io"
+      secretName: vaultwarden-tls
   rules:
     - host: "vaultwarden.mafmanhomelab.dedyn.io"
       http:
