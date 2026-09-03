@@ -172,7 +172,7 @@ service:
 ## @param ingress.hosts[0].paths[0].port Target port for Ingress
 ## @param ingress.tls Ingress tls settings
 ingress:
-  enabled: false
+  enabled: true
   # className: nginx
   className:
   annotations:
