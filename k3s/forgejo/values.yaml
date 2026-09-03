@@ -116,7 +116,7 @@ service:
   ## @param service.http.loadBalancerClass Loadbalancer class
   ## @param service.http.extraPorts Additional ports
   http:
-    type: ClusterIP
+    type: LoadBalancer
     port: 3000
     clusterIP:
     loadBalancerIP: 192.168.0.200
@@ -126,7 +126,8 @@ service:
     ipFamilyPolicy:
     ipFamilies:
     loadBalancerSourceRanges: []
-    annotations: {}
+    annotations:
+      metallb.io/allow-shared-ip: "git-ip"
     labels: {}
     loadBalancerClass:
     extraPorts: []
@@ -145,7 +146,7 @@ service:
   ## @param service.ssh.labels SSH service additional labels
   ## @param service.ssh.loadBalancerClass Loadbalancer class
   ssh:
-    type: ClusterIP
+    type: LoadBalancer
     port: 22
     clusterIP:
     loadBalancerIP: 192.168.0.200
@@ -156,7 +157,8 @@ service:
     ipFamilies:
     hostPort:
     loadBalancerSourceRanges: []
-    annotations: {}
+    annotations:
+      metallb.io/allow-shared-ip: "git-ip"
     labels: {}
     loadBalancerClass:
 
@@ -564,6 +566,8 @@ gitea:
     server:
       SSH_PORT: 22 # rootful image
       SSH_LISTEN_PORT: 2222 # rootless image
+      SSH_DOMAIN: git.internal
+      ROOT_URL: http://git.internal/
 
     ## @param gitea.config.database Database configuration (only necessary with an [externally managed DB](#external-database)).
     database: {}
