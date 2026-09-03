@@ -130,7 +130,11 @@ service:
       metallb.io/allow-shared-ip: "git-ip"
     labels: {}
     loadBalancerClass:
-    extraPorts: []
+    extraPorts:
+      - name: http-80
+        port: 80
+        targetPort: 3000
+        protocol: TCP
   ## @param service.ssh.type Kubernetes service type for ssh traffic
   ## @param service.ssh.port Port number for ssh traffic
   ## @param service.ssh.clusterIP ClusterIP setting for ssh autosetup for deployment
@@ -172,7 +176,7 @@ service:
 ## @param ingress.hosts[0].paths[0].port Target port for Ingress
 ## @param ingress.tls Ingress tls settings
 ingress:
-  enabled: true
+  enabled: false
   # className: nginx
   className:
   annotations:
