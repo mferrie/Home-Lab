@@ -31,4 +31,4 @@ The architecture mismatch between the Raspberry Pis (ARM 64) and the laptop (AMD
 ![image SearXNG](./Screenshots/SearXNG.png)
 ![image ArgoCD](./Screenshots/ArgoCD.png)
 ![image Joplin](./Screenshots/joplin.png)
-![image VaultWarden](./Screenshots/vaultwarden.png)
+![image VaultWarden](./Screenshots/Vaultwarden.png)
