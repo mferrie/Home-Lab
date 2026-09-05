@@ -68,11 +68,6 @@ spec:
                 operator: In
                 values:
                   - arm64
-      tolerations:
-        - key: node-type
-          operator: Equal
-          value: compute-only
-          effect: NoSchedule
       containers:
         - name: pihole-unbound
           image: mpgirro/pihole-unbound:2026.06.0
