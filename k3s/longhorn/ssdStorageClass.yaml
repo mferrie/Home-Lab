@@ -8,4 +8,4 @@ parameters:
   nodeSelector: "ssd"
   dataLocality: "disabled"
 reclaimPolicy: Delete
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate
