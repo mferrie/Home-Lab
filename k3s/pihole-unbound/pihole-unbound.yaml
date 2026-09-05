@@ -64,10 +64,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: kubernetes.io/hostname
+              - key: kubernetes.io/arch
                 operator: In
                 values:
-                  - pi-3
+                  - arm64
       tolerations:
         - key: node-type
           operator: Equal
