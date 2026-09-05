@@ -64,10 +64,10 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
             nodeSelectorTerms:
             - matchExpressions:
-              - key: kubernetes.io/arch
+              - key: kubernetes.io/hostname
                 operator: In
                 values:
-                  - arm64
+                  - pi-3
       containers:
         - name: pihole-unbound
           image: mpgirro/pihole-unbound:2026.06.0
