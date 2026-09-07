@@ -15,7 +15,7 @@ data:
     title: Local Cloud
     description: Making Big Tech obsolete
     background:
-        image: https://eol.jsc.nasa.gov/DatabaseImages/EO/highres/ISS056/ISS056-E-77502.JPG
+        image: https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2026/03/technology_and_nature/27172307-1-eng-GB/Technology_and_nature_pillars.jpg
         blur: "sm"
         saturate: 100
         brightness: 100
