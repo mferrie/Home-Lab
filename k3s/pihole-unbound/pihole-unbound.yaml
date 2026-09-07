@@ -68,6 +68,10 @@ spec:
                 operator: In
                 values:
                   - arm64
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                  - pi-3
       containers:
         - name: pihole-unbound
           image: mpgirro/pihole-unbound:2026.06.0
