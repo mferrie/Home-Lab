@@ -72,6 +72,11 @@ spec:
                 operator: In
                 values:
                   - pi-3
+      tolerations:
+        - key: node-type
+          operator: Equal
+          value: compute-only
+          effect: NoSchedule
       containers:
         - name: pihole-unbound
           image: mpgirro/pihole-unbound:2026.06.0
