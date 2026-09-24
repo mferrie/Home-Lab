@@ -79,7 +79,7 @@ spec:
           effect: NoSchedule
       containers:
         - name: pihole-unbound
-          image: mpgirro/pihole-unbound:2026.06.0
+          image: mpgirro/pihole-unbound:2026.09.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 443
