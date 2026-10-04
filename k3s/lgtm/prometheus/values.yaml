@@ -1,8 +1,3 @@
-# yaml-language-server: $schema=values.schema.json
-# Default values for prometheus.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
 rbac:
   create: true
 
@@ -121,7 +116,13 @@ configmapReload:
     ## configmap-reload resource requests and limits
     ## Ref: http://kubernetes.io/docs/user-guide/compute-resources/
     ##
-    resources: {}
+    resources:
+      requests:
+        cpu: 500m
+        ram: 512Mi
+      limits:
+        cpu: 1000m
+        ram: 1Gi
 
 server:
   ## Prometheus server container name
@@ -225,7 +226,7 @@ server:
 
   ## External URL which can access prometheus
   ## Maybe same with Ingress host name
-  baseURL: ""
+  baseURL: "prometheus.internal"
 
   ## Additional server container environment variables
   ##
@@ -696,8 +697,8 @@ server:
   ##
   resources:
     limits:
-      cpu: 500m
-      memory: 512Mi
+      cpu: 1000m
+      memory: 1Gi
     requests:
       cpu: 500m
       memory: 512Mi
@@ -798,11 +799,11 @@ server:
 
   ## Prometheus data retention period (default if not specified is 15 days)
   ##
-  retention: "15d"
+  retention: "7d"
 
   ## Prometheus' data retention size. Supported units: B, KB, MB, GB, TB, PB, EB.
   ##
-  retentionSize: "16GB"
+  retentionSize: "4GB"
 
 ## scrapeConfigs (map) defines Prometheus' default scrape_configs.
 ## Each can be disabled by setting "enabled" to "false" or leaving it empty. The key sets the default "job_name".
