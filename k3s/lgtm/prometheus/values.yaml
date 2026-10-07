@@ -273,13 +273,13 @@ server:
   global:
     ## How frequently to scrape targets by default
     ##
-    scrape_interval: 1m
+    scrape_interval: 5s
     ## How long until a scrape request times out
     ##
     scrape_timeout: 10s
     ## How frequently to evaluate rules
     ##
-    evaluation_interval: 1m
+    evaluation_interval: 5s
   ## https://prometheus.io/docs/prometheus/latest/configuration/configuration/#remote_write
   ##
   remoteWrite: []
@@ -697,8 +697,13 @@ server:
   ##
   resources:
     limits:
+<<<<<<< HEAD
       cpu: 1000m
       memory: 1Gi
+=======
+      cpu: 500m
+      memory: 512Mi
+>>>>>>> bf6b718 (Reconfigured Prometheus resource and scrape interval)
     requests:
       cpu: 500m
       memory: 512Mi
