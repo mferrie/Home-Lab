@@ -697,13 +697,10 @@ server:
   ##
   resources:
     limits:
-<<<<<<< HEAD
       cpu: 1000m
       memory: 1Gi
-=======
       cpu: 500m
       memory: 512Mi
->>>>>>> bf6b718 (Reconfigured Prometheus resource and scrape interval)
     requests:
       cpu: 500m
       memory: 512Mi
