@@ -116,7 +116,7 @@ data:
     - Media:
         - Immich:
             icon: sh-immich
-            href: http://immich.internal/
+            href: https://immich.internal/
             description: Photo storage server
             siteMonitor: http://immich-server.immich.svc.cluster.local:2283
             statusStyle: 'dot'
