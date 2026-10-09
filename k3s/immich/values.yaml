@@ -38,7 +38,7 @@ controllers:
 immich:
   metrics:
     # Enabling this will create the service monitors needed to monitor immich with the prometheus operator
-    enabled: false
+    enabled: true
   persistence:
     # Main data store for all photos shared between different components.
     library:
@@ -48,13 +48,13 @@ immich:
   # configuration is immich-config.json converted to yaml. Ignored if existingConfiguration is set.
   # ref: https://immich.app/docs/install/config-file/
   #
-  configuration: {}
-    # trash:
-    #   enabled: false
-    #   days: 30
-    # storageTemplate:
-    #   enabled: true
-    #   template: "{{y}}/{{y}}-{{MM}}-{{dd}}/{{filename}}"
+  configuration:
+    trash:
+      enabled: true
+      days: 30
+    storageTemplate:
+      enabled: true
+      template: "{{y}}/{{y}}-{{MM}}-{{dd}}/{{filename}}"
   # Sets the resource Kind to store configuration in. Must be either ConfigMap or Secret.
   configurationKind: ConfigMap
 
@@ -89,7 +89,6 @@ valkey:
       storageClass: longhorn-ssd
 
 # Immich components
-
 server:
   enabled: true
   controllers:
@@ -104,8 +103,8 @@ server:
               cpu: 250m
               memory: 512Mi
             limits:
-              cpu: "1"
-              memory: 1536Mi
+              cpu: 2000m
+              memory: 1Gi
       pod:
         affinity:
           nodeAffinity:
@@ -146,8 +145,8 @@ machine-learning:
               cpu: 500m
               memory: 1Gi
             limits:
-              cpu: "2"
-              memory: 3Gi
+              cpu: 2000m
+              memory: 2Gi
       pod:
         affinity:
           nodeAffinity:
