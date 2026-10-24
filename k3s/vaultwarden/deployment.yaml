@@ -20,7 +20,7 @@ spec:
       restartPolicy: Always
       containers:
         - name: vaultwarden
-          image: vaultwarden/server:latest
+          image: vaultwarden/server:1.37.4
           env:
             - name: DOMAIN
               value: https://vaultwarden.mafmanhomelab.dedyn.io

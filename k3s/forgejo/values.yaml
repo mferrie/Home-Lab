@@ -52,7 +52,7 @@ image:
   registry: code.forgejo.org
   repository: forgejo/forgejo
   # Overrides the image tag whose default is the chart appVersion.
-  tag: '16.0.4'
+  tag: '17.0.0'
   digest: ''
   pullPolicy: IfNotPresent
   rootless: true
