@@ -1,6 +1,6 @@
 # Immich OOM / Database Outage Incident Report
 
-Oct 12, 2026 · @Matt Ferrie
+Oct 12, 2026 | Matt F.
 
 ## Summary
 

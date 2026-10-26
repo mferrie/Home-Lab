@@ -1,6 +1,6 @@
 # Incident Report: Grafana/Prometheus Outage (LGTM Stack)
 
-Oct 12, 2026 · @Matt Ferrie
+Oct 12, 2026 | Matt F.
 
 ## Summary
 
