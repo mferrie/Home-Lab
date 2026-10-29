@@ -1,6 +1,6 @@
 # Multi-Architecture K3s Edge Cluster & GitOps Infrastructure
 
-## Executive Overview
+## Project Overview
 A declarative, multi-architecture Kubernetes (K3s) cluster managing ~24 stateful and stateless services across a hybrid node pool (ARM64 edge devices and x86_64 compute). Designed for high resource density within a 25GB RAM footprint, leveraging automated GitOps pipelines, distributed persistent storage, and secure network-edge access control.
 
 ## System Architecture & Technical Specifications
