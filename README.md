@@ -8,7 +8,8 @@ A declarative, multi-architecture Kubernetes (K3s) cluster managing ~24 stateful
 * **Orchestration:** K3s (Lightweight Kubernetes)
 * **Compute Nodes:**
   * 1x Dell Latitude 7490 (x86_64 / AMD64) - Primary Compute / Control Plane & Storage
-  * 2x Raspberry Pi 3/4 (ARM64) - Edge Compute & Supporting Services
+  * 1x Raspberry Pi 3 (ARM64) - Edge Compute and Ingress Control
+  * 1x Raspberry Pi 4 (ARM64) - Middleweight Compute and Distributed Storage Peer
 * **Storage Engine:** Longhorn (Distributed block storage with persistent volume replication)
 * **Continuous Delivery:** GitOps driven via Argo CD *(Migration to Flux scheduled)*
 * **Ingress & Networking:** Traefik Ingress Controller terminated via edge-routed WireGuard VPN, load balanced by MetalLB
@@ -16,24 +17,24 @@ A declarative, multi-architecture Kubernetes (K3s) cluster managing ~24 stateful
 
 ## Engineering Constraints & Solutions
 
-* **Heterogeneous Node Scheduling:** Resolved architecture mismatches (ARM64 vs. AMD64) by enforcing multi-arch container image manifests and explicit node affinity/toleration rules.
+* **Heterogeneous Node Scheduling:** Resolved architecture mismatches (ARM64 vs. AMD64) by enforcing multi-arch container image manifests and explicit node affinity and taint/toleration rules.
 * **Storage Isolation:** Excluded SD-card-bound nodes from the Longhorn replica pool to prevent IOPS bottlenecks and storage degradation, offloading distributed storage strictly to wear-levelled media.
 * **Resource Optimization:** Managed container density (~24 active workloads) within a tightly constrained 25GB RAM ceiling using strict CPU/Memory request and limit allocations.
 
 ## Operational Resilience & Post-Mortems
 
-This environment is operated as a live production system. Below are selected incident post-mortems documenting root-cause analyses and remediation strategies:
+This environment host several solutions that I use daily. Below are selected incident post-mortems documenting root-cause analyses and remediation strategies:
 
 ### 1. Cascading Resource Exhaustion (OOM)
 * **Root Cause:** Application deployed without explicit container memory limits, leading to memory pressure on the node and Linux kernel OOM killer invocation.
 * **Remediation:** Enforced resource quotas and defined default `requests` and `limits` across all deployment manifests in the GitOps repository.
 
 ### 2. Thermal Throttling & Hardware Storage Disruption
-* **Root Cause:** Environmental thermal throttling on compute hardware caused transient NVMe/SATA controller drops on the primary boot volume.
+* **Root Cause:** Environmental thermal throttling on compute hardware caused transient SD card controller drops on the primary boot volume.
 * **Remediation:** Adjusted physical thermal management, modified storage controller timeout thresholds, and implemented automated node health checks.
 
 ### 3. Distributed Consensus & Quorum Loss Recovery
-* **Root Cause:** Simultaneous dual-node power failure caused etcd/dqlite quorum loss and stuck volume attachments in Longhorn.
+* **Root Cause:** Simultaneous dual-node power failure caused containers scheduling to fail and resulted in stuck volume attachments in Longhorn.
 * **Remediation:** Executed state-verification protocol, gracefully cleared stale volume attachments and stuck claims, and re-synchronized cluster consensus without persistent data loss.
 
 ## Screenshots
