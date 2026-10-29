@@ -26,16 +26,21 @@ A declarative, multi-architecture Kubernetes (K3s) cluster managing ~24 stateful
 This environment host several solutions that I use daily. Below are selected incident post-mortems documenting root-cause analyses and remediation strategies:
 
 ### 1. Cascading Resource Exhaustion (OOM)
+
 * **Root Cause:** Application deployed without explicit container memory limits, leading to memory pressure on the node and Linux kernel OOM killer invocation.
 * **Remediation:** Enforced resource quotas and defined default `requests` and `limits` across all deployment manifests in the GitOps repository.
 
 ### 2. Thermal Throttling & SD Card Disconnects on Pi 3
-Impact: The Pi 3 is the ingress node and also served DNS for the home network, so when it degraded, DNS went down for the whole Wi-Fi network.
-Root Cause: Heat caused thermal throttling and transient SD card drops. Pods on the node failed their health checks and restarted while the node was still recovering.
-Remediation: Improved cooling and increased health check wait periods (initial delay and failure thresholds) on the workloads scheduled to that node, so they could tolerate a slow recovery instead of being restarted in a loop.
+* **Impact:** The Pi 3 is the ingress node and also served DNS for the home network, so when it degraded, DNS went down for the whole Wi-Fi network.
+
+* **Root Cause:** Heat caused thermal throttling and transient SD card drops. Pods on the node failed their health checks and restarted while the node was still recovering.
+
+* **Remediation:** Improved cooling and increased health check wait periods (initial delay and failure thresholds) on the workloads scheduled to that node, so they could tolerate a slow recovery instead of being restarted in a loop.
 
 ### 3. Storage Consensus and Scheduling Failure Recovery
+
 * **Root Cause:** Simultaneous dual-node power failure caused containers scheduling to fail and resulted in stuck volume attachments in Longhorn.
+
 * **Remediation:** Executed state-verification protocol, gracefully cleared stale volume attachments and stuck claims, and re-synchronized cluster consensus without persistent data loss.
 
 ## Screenshots
