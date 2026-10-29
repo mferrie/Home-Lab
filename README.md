@@ -13,17 +13,17 @@ A declarative, multi-architecture Kubernetes (K3s) cluster managing ~24 stateful
 * **Storage Engine:** Longhorn (Distributed block storage with persistent volume replication)
 * **Continuous Delivery:** GitOps driven via Argo CD *(Migration to Flux scheduled)*
 * **Ingress & Networking:** Traefik Ingress Controller terminated via edge-routed WireGuard VPN, load balanced by MetalLB
-* **Resource Envelope:** 25 GB Total System Memory across node pools
+* **Resource Envelope:** 21 GB Total System Memory across node pools (Pi 3: 1 GB; Pi 4: 4 GB; Dell: 16 GB)
 
 ## Engineering Constraints & Solutions
 
 * **Heterogeneous Node Scheduling:** Resolved architecture mismatches (ARM64 vs. AMD64) by enforcing multi-arch container image manifests and explicit node affinity and taint/toleration rules.
-* **Storage Isolation:** Excluded SD-card-bound nodes from the Longhorn replica pool to prevent IOPS bottlenecks and storage degradation, offloading distributed storage strictly to wear-levelled media.
-* **Resource Optimization:** Managed container density (~24 active workloads) within a tightly constrained 25GB RAM ceiling using strict CPU/Memory request and limit allocations.
+* **Storage Isolation:** Excluded SD-card-bound nodes (Pi-3) from the Longhorn replica pool to increase storage bandwidth and mitigate storage degradation, offloading distributed storage strictly to wear-levelled media.
+* **Resource Optimization:** Managed container density (~24 active workloads) within a tightly constrained RAM ceiling using strict CPU/Memory request and limit allocations.
 
 ## Operational Resilience & Post-Mortems
 
-This environment host several solutions that I use daily. Below are selected incident post-mortems documenting root-cause analyses and remediation strategies:
+This environment hosts several solutions that I use daily. Below are selected incident post-mortems documenting root-cause analyses and remediation strategies:
 
 ### 1. Cascading Resource Exhaustion (OOM)
 
@@ -37,11 +37,11 @@ This environment host several solutions that I use daily. Below are selected inc
 
 * **Remediation:** Improved cooling and increased health check wait periods (initial delay and failure thresholds) on the workloads scheduled to that node, so they could tolerate a slow recovery instead of being restarted in a loop.
 
-### 3. Storage Consensus and Scheduling Failure Recovery
+### 3. Recovery after Dual-Node Power Loss
 
-* **Root Cause:** Simultaneous dual-node power failure caused containers scheduling to fail and resulted in stuck volume attachments in Longhorn.
+* **Root Cause:** Simultaneous dual-node power failure caused container scheduling to fail and resulted in stuck volume attachments in Longhorn.
 
-* **Remediation:** Executed state-verification protocol, gracefully cleared stale volume attachments and stuck claims, and re-synchronized cluster consensus without persistent data loss.
+* **Remediation:** Verified volume integrity, gracefully cleared stale volume attachments and stuck claims, and restarted application deployments without persistent data loss.
 
 ## Screenshots
 ![image ForgeJo](./Screenshots/Forgejo.png)
