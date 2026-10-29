@@ -1,0 +1,243 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: forgejo
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/forgejo
+  prune: true
+  wait: true
+  suspend: false
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: searxng
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/searxng
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: mealie
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/mealie
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: homepage
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/homepage
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: joplin
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/joplin
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: vaultwarden
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/vaultwarden
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: pihole-unbound
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/pihole-unbound
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+# Config-only folders: the controllers themselves are installed elsewhere
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: metallb-config
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/metallb
+  prune: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cert-manager-config
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/cert-manager
+  prune: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: longhorn-config
+  namespace: flux-system
+spec:
+  interval: 10m
+  path: ./k3s/longhorn
+  prune: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: forgejo
+  namespace: flux-system
+spec:
+  interval: 10m
+  timeout: 10m
+  path: ./k3s/forgejo
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: nextcloud
+  namespace: flux-system
+spec:
+  interval: 10m
+  timeout: 10m
+  path: ./k3s/nextcloud
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: immich
+  namespace: flux-system
+spec:
+  interval: 10m
+  timeout: 10m
+  path: ./k3s/immich
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: loki
+  namespace: flux-system
+spec:
+  interval: 10m
+  timeout: 10m
+  path: ./k3s/lgtm/loki
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: prometheus
+  namespace: flux-system
+spec:
+  interval: 10m
+  timeout: 10m
+  path: ./k3s/lgtm/prometheus
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: tempo
+  namespace: flux-system
+spec:
+  interval: 10m
+  timeout: 10m
+  path: ./k3s/lgtm/tempo
+  prune: true
+  wait: true
+  suspend: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
