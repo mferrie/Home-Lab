@@ -40,12 +40,12 @@ spec:
               protocol: TCP
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
-              name: db-claim0
+              name: db-data
       restartPolicy: Always
       volumes:
-        - name: db-claim0
+        - name: db-data
           persistentVolumeClaim:
-            claimName: db-claim0
+            claimName: db-data
 
 ---
 

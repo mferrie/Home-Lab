@@ -112,14 +112,9 @@ The Kustomization objects live in `flux-system`. The apps themselves stay in the
 ### 2. Before touching the app
 
 - Take a Longhorn snapshot of any volume (vaultwarden, joplin, nextcloud, immich, forgejo, and so on).
-- `argocd app list | grep <app>` to confirm Argo still owns it.
 - Dry run: `kubectl apply --dry-run=server -R -f k3s/<app>/` for plain manifests, or `kubectl kustomize k3s/<app>` for Helm folders.
 
 ### 3. Delete the Argo app, non-cascading
-
-```
-argocd app delete <app> --cascade=false
-```
 
 In the UI, choose **Non-cascading** in the delete dialog. A cascading delete removes the running workloads and PVCs.
 

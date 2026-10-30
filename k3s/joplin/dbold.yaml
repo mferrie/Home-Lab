@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: db-old
+  namespace: joplin
+spec:
+  accessModes: [ReadWriteOnce]
+  storageClassName: longhorn
+  volumeName: pvc-6e05568d-7cb4-49ed-a0f0-34c3faea97d6
+  resources:
+    requests:
+      storage: 5Gi
