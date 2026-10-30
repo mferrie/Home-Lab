@@ -1,4 +1,3 @@
-```yaml
 rbac:
   create: true
 
@@ -190,7 +189,7 @@ server:
     sizeLimit: ""
 
   podAnnotations: {}
-  podLabels: []
+  podLabels: {}
   alertmanagers: []
 
   replicaCount: 1
