@@ -23,7 +23,7 @@ spec:
   path: ./k3s/searxng
   prune: true
   wait: true
-  suspend: true
+  suspend: false
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -189,7 +189,7 @@ spec:
   path: ./k3s/lgtm/loki
   prune: true
   wait: true
-  suspend: true
+  suspend: false
   sourceRef:
     kind: GitRepository
     name: flux-system
