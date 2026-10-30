@@ -689,8 +689,9 @@ server:
   livenessProbeFailureThreshold: 3
   livenessProbeSuccessThreshold: 1
   startupProbe:
-    enabled: false
-    periodSeconds: 5
+    enabled: true
+    path: /~/healthy
+    periodSeconds: 10
     failureThreshold: 30
     timeoutSeconds: 10
 
