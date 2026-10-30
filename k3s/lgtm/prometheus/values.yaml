@@ -92,7 +92,7 @@ configmapReload:
 
     livenessProbe:
       httpGet:
-        path: /healthz
+        path: /prometheus.internal/~/healthy
         port: metrics
         scheme: HTTP
       periodSeconds: 10
@@ -100,7 +100,7 @@ configmapReload:
 
     readinessProbe:
       httpGet:
-        path: /healthz
+        path: /prometheus.internal/~/healthy
         port: metrics
         scheme: HTTP
       periodSeconds: 10
@@ -108,7 +108,7 @@ configmapReload:
     startupProbe:
       enabled: true
       httpGet:
-        path: /healthz
+        path: /prometheus.internal/~/healthy
         port: metrics
         scheme: HTTP
       periodSeconds: 10
