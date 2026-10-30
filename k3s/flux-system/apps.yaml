@@ -68,7 +68,7 @@ spec:
   path: ./k3s/joplin
   prune: true
   wait: true
-  suspend: true
+  suspend: false
   sourceRef:
     kind: GitRepository
     name: flux-system
