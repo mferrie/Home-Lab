@@ -60,11 +60,11 @@ configmapReload:
 
     resources:
       requests:
-        cpu: 500m
-        memory: 512Mi
+        cpu: 10m
+        memory: 32Mi
       limits:
-        cpu: 1000m
-        memory: 1Gi
+        cpu: 100m
+        memory: 128Mi
 
 server:
   name: server
