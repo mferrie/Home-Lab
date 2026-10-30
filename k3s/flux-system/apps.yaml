@@ -205,7 +205,7 @@ spec:
   path: ./k3s/lgtm/prometheus
   prune: true
   wait: true
-  suspend: true
+  suspend: false
   sourceRef:
     kind: GitRepository
     name: flux-system
