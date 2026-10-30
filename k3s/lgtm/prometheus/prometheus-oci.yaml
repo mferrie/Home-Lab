@@ -1,0 +1,13 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: OCIRepository
+metadata:
+  name: prometheus-chart
+  namespace: lgtm
+spec:
+  interval: 10m
+  url: oci://ghcr.io/prometheus-community/charts/prometheus
+  ref:
+    tag: "29.40.0"
+  layerSelector:
+    mediaType: application/vnd.cncf.helm.chart.content.v1.tar+gzip
+    operation: copy
