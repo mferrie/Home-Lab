@@ -106,12 +106,14 @@ configmapReload:
       periodSeconds: 10
 
     startupProbe:
-      enabled: false
+      enabled: true
       httpGet:
         path: /healthz
         port: metrics
         scheme: HTTP
       periodSeconds: 10
+      failureThreshold: 30
+      timeoutSeconds: 10
 
     ## configmap-reload resource requests and limits
     ## Ref: http://kubernetes.io/docs/user-guide/compute-resources/
