@@ -11,3 +11,6 @@ configMapGenerator:
   - name: prometheus-values
     files:
       - values.yaml
+
+configurations:
+  - kustomizeconfig.yaml
