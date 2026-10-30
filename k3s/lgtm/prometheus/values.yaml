@@ -586,3 +586,4 @@ serverFiles:
 alertRelabelConfigs: {}
 
 networkPolicy:
+  enabled: false
