@@ -120,10 +120,10 @@ configmapReload:
     ##
     resources:
       requests:
-        cpu: 500m
+        cpu: 1000m
         memory: 512Mi
       limits:
-        cpu: 1000m
+        cpu: 2000m
         memory: 1Gi
 
 server:
@@ -691,8 +691,8 @@ server:
   startupProbe:
     enabled: true
     periodSeconds: 5
-    failureThreshold: 120
-    timeoutSeconds: 10
+    failureThreshold: 300
+    timeoutSeconds: 30
 
   ## Prometheus server resource requests and limits
   ## Ref: http://kubernetes.io/docs/user-guide/compute-resources/
