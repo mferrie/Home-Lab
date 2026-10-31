@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: joplin
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://codeberg.org/kaizenOramara_97/Home-Lab.git
+    targetRevision: HEAD
+    path: k3s/joplin
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: joplin
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true

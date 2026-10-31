@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mealie
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://codeberg.org/kaizenOramara_97/Home-Lab.git
+    targetRevision: HEAD
+    path: k3s/mealie
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: mealie
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true
