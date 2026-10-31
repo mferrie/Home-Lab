@@ -680,18 +680,18 @@ server:
   probeScheme: HTTP
   readinessProbeInitialDelay: 30
   readinessProbePeriodSeconds: 5
-  readinessProbeTimeout: 4
+  readinessProbeTimeout: 30
   readinessProbeFailureThreshold: 3
   readinessProbeSuccessThreshold: 1
-  livenessProbeInitialDelay: 30
+  livenessProbeInitialDelay: 120
   livenessProbePeriodSeconds: 15
-  livenessProbeTimeout: 10
-  livenessProbeFailureThreshold: 3
+  livenessProbeTimeout: 30
+  livenessProbeFailureThreshold: 10
   livenessProbeSuccessThreshold: 1
   startupProbe:
-    enabled: false
+    enabled: true
     periodSeconds: 5
-    failureThreshold: 30
+    failureThreshold: 120
     timeoutSeconds: 10
 
   ## Prometheus server resource requests and limits
@@ -699,7 +699,7 @@ server:
   ##
   resources:
     limits:
-      cpu: 1000m
+      cpu: 2000m
       memory: 1Gi
     requests:
       cpu: 500m
