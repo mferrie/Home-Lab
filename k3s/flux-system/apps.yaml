@@ -6,9 +6,9 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/forgejo
-  prune: true
+  prune: false
   wait: true
-  suspend: false
+  suspend: true
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -21,9 +21,9 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/searxng
-  prune: true
+  prune: false
   wait: true
-  suspend: false
+  suspend: true
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -36,7 +36,7 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/mealie
-  prune: true
+  prune: false
   wait: true
   suspend: true
   sourceRef:
@@ -51,9 +51,9 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/homepage
-  prune: true
+  prune: false
   wait: true
-  suspend: false
+  suspend: true
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -66,9 +66,9 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/joplin
-  prune: true
+  prune: false
   wait: true
-  suspend: false
+  suspend: true
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -81,7 +81,7 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/vaultwarden
-  prune: true
+  prune: false
   wait: true
   suspend: true
   sourceRef:
@@ -96,7 +96,7 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/pihole-unbound
-  prune: true
+  prune: false
   wait: true
   suspend: true
   sourceRef:
@@ -112,7 +112,7 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/metallb
-  prune: true
+  prune: false
   suspend: true
   sourceRef:
     kind: GitRepository
@@ -126,7 +126,7 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/cert-manager
-  prune: true
+  prune: false
   suspend: true
   sourceRef:
     kind: GitRepository
@@ -140,7 +140,7 @@ metadata:
 spec:
   interval: 10m
   path: ./k3s/longhorn
-  prune: true
+  prune: false
   suspend: true
   sourceRef:
     kind: GitRepository
@@ -155,7 +155,7 @@ spec:
   interval: 10m
   timeout: 10m
   path: ./k3s/nextcloud
-  prune: true
+  prune: false
   wait: true
   suspend: true
   sourceRef:
@@ -171,7 +171,7 @@ spec:
   interval: 10m
   timeout: 10m
   path: ./k3s/immich
-  prune: true
+  prune: false
   wait: true
   suspend: true
   sourceRef:
@@ -187,9 +187,9 @@ spec:
   interval: 10m
   timeout: 10m
   path: ./k3s/lgtm/loki
-  prune: true
+  prune: false
   wait: true
-  suspend: false
+  suspend: true
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -203,9 +203,9 @@ spec:
   interval: 10m
   timeout: 10m
   path: ./k3s/lgtm/prometheus
-  prune: true
+  prune: false
   wait: true
-  suspend: false
+  suspend: true
   sourceRef:
     kind: GitRepository
     name: flux-system
@@ -219,7 +219,7 @@ spec:
   interval: 10m
   timeout: 10m
   path: ./k3s/lgtm/tempo
-  prune: true
+  prune: false
   wait: true
   suspend: true
   sourceRef:
@@ -235,9 +235,9 @@ spec:
   interval: 10m
   timeout: 10m
   path: ./k3s/lgtm/grafana
-  prune: true
+  prune: false
   wait: true
-  suspend: false
+  suspend: true
   sourceRef:
     kind: GitRepository
     name: flux-system
