@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prometheus
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://codeberg.org/kaizenOramara_97/Home-Lab.git
+      targetRevision: HEAD
+      ref: values
+    - repoURL: ghcr.io/prometheus-community/charts
+      chart: prometheus
+      targetRevision: 29.40.0
+      helm:
+        releaseName: prometheus
+        valueFiles:
+          - $values/k3s/lgtm/prometheus/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lgtm
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true
+      - RespectIgnoreDifferences=true

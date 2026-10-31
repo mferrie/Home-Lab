@@ -119,10 +119,10 @@ configmapReload:
     resources:
       requests:
         cpu: 500m
-        ram: 512Mi
+        memory: 512Mi
       limits:
         cpu: 1000m
-        ram: 1Gi
+        memory: 1Gi
 
 server:
   ## Prometheus server container name
