@@ -237,7 +237,7 @@ spec:
   path: ./k3s/lgtm/grafana
   prune: true
   wait: true
-  suspend: true
+  suspend: false
   sourceRef:
     kind: GitRepository
     name: flux-system
