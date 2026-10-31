@@ -111,8 +111,8 @@ configmapReload:
         path: /healthz
         port: metrics
         scheme: HTTP
-      periodSeconds: 5
-      failureThreshold: 120
+      periodSeconds: 10
+      failureThreshold: 180
       timeoutSeconds: 10
 
     ## configmap-reload resource requests and limits
@@ -690,7 +690,7 @@ server:
   livenessProbeSuccessThreshold: 1
   startupProbe:
     enabled: true
-    periodSeconds: 5
+    periodSeconds: 10
     failureThreshold: 300
     timeoutSeconds: 30
 
