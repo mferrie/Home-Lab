@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: loki
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://codeberg.org/kaizenOramara_97/Home-Lab.git
+      targetRevision: HEAD
+      ref: values
+    - repoURL: ghcr.io/grafana-community/helm-charts
+      chart: loki
+      targetRevision: 17.4.9
+      helm:
+        releaseName: loki
+        valueFiles:
+          - $values/k3s/lgtm/loki/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: lgtm
+  syncPolicy:
+    syncOptions:
+      - ServerSideApply=true
+      - RespectIgnoreDifferences=true
