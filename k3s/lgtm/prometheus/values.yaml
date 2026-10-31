@@ -491,7 +491,8 @@ server:
   ## Node labels for Prometheus server pod assignment
   ## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
   ##
-  nodeSelector: {}
+  nodeSelector:
+    kubernetes.io/hostname: dell-debian
 
   ## Pod affinity
   ##
@@ -699,11 +700,11 @@ server:
   ##
   resources:
     limits:
-      cpu: 2000m
-      memory: 2Gi
+      cpu: 2
+      memory: 4Gi
     requests:
-      cpu: 500m
-      memory: 512Mi
+      cpu: 1
+      memory: 3Gi
 
   # Required for use in managed kubernetes clusters (such as AWS EKS) with custom CNI (such as calico),
   # because control-plane managed by AWS cannot communicate with pods' IP CIDR and admission webhooks are not working
