@@ -228,7 +228,7 @@ server:
 
   ## External URL which can access prometheus
   ## Maybe same with Ingress host name
-  baseURL: "prometheus.internal"
+  baseURL: "http://prometheus.internal"
 
   ## Additional server container environment variables
   ##
