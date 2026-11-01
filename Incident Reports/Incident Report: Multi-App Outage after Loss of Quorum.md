@@ -4,7 +4,7 @@ Note: All times are given in UTC
 Date: October 10, 2026
 Environment:
 		k3s server cluster (hostnames: dell-debian, pi-3, pi-4; dell-debian is control plane)
-		Longhorn v1.1.12
+		Longhorn v1.11.2
 		ArgoCD
 		CloudNativePG v1.30.0
 Final Status: Service restored, no data loss
