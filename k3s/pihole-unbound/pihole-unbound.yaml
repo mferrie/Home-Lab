@@ -181,6 +181,13 @@ metadata:
   namespace: pihole
   annotations:
     spec.ingressClassName: "traefik"
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/description: DNS Sinkhole
+    gethomepage.dev/group: Networking
+    gethomepage.dev/icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
+    gethomepage.dev/name: PiHole
+    gethomepage.dev/widget.type: "pihole"
+    gethomepage.ddev/widget.url: "http://pihole.internal/admin"
 spec:
   rules:
   - host: pihole.internal
