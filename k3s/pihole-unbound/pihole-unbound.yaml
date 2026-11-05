@@ -187,7 +187,7 @@ metadata:
     gethomepage.dev/icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/pi-hole.png
     gethomepage.dev/name: PiHole
     gethomepage.dev/widget.type: "pihole"
-    gethomepage.ddev/widget.url: "http://pihole.internal/admin/login"
+    gethomepage.dev/widget.url: "http://pihole.internal/admin/login"
 spec:
   rules:
   - host: pihole.internal/admin/login
