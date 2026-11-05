@@ -190,7 +190,7 @@ metadata:
     gethomepage.ddev/widget.url: "http://pihole.internal/admin/login"
 spec:
   rules:
-  - host: pihole.internal
+  - host: pihole.internal/admin/login
     http:
       paths:
       - path: /
