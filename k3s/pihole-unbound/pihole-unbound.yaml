@@ -193,7 +193,7 @@ spec:
   - host: pihole.internal
     http:
       paths:
-      - path: /admin/login
+      - path: /
         pathType: Prefix
         backend:
           service:
