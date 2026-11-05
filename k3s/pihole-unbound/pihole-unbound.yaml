@@ -190,10 +190,10 @@ metadata:
     gethomepage.dev/widget.url: "http://pihole.internal/admin/login"
 spec:
   rules:
-  - host: pihole.internal/admin/login
+  - host: pihole.internal
     http:
       paths:
-      - path: /
+      - path: /admin/login
         pathType: Prefix
         backend:
           service:
