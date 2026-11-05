@@ -188,6 +188,7 @@ metadata:
     gethomepage.dev/name: PiHole
     gethomepage.dev/widget.type: "pihole"
     gethomepage.dev/widget.url: "http://pihole.internal/admin/login"
+    gethomepage.dev/siteMonitor: "http://pihole-web.pihole.svc.cluster.local"
 spec:
   rules:
   - host: pihole.internal
