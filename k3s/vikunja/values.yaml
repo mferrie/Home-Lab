@@ -14,13 +14,12 @@ vikunja:
       ingressClassName: traefik
       annotations:
         traefik.ingress.kubernetes.io/router.entrypoints: web
-        cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
         - host: vikunja.internal
           paths:
             - path: /
       tls: []
-  configmaps:
+  configMaps:
     config:
       enabled: true
       data:
