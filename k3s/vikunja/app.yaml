@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://codeberg.org/kaizenOramara_97/Home-Lab.git
     targetRevision: HEAD
-    path: charts/vikunja
+    path: k3s/vikunja
     helm:
       valueFiles:
         - values.yaml
