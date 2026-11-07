@@ -25,4 +25,5 @@ vikunja:
         enabled: true
         data:
           config.yml: |
-            publicurl: "https://vikunja.internal"
+            service:
+              publicurl: "http://vikunja.internal"
