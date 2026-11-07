@@ -167,7 +167,7 @@ data:
             icon: si-vikunja
             href: http://vikunja.internal
             description: Task Organizer
-            siteMonitor: http://vikunja.vikunja.svc.cluster.local
+            siteMonitor: http://vikunja.vikunja.svc.cluster.local:3456
             widget:
               type: vikunja
               url: http://vikunja.internal
