@@ -75,6 +75,11 @@ spec:
                 secretKeyRef:
                   name: nextcloud-key
                   key: password
+            - name: HOMEPAGE_VAR_VIKUNJA_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: vikunja-key
+                  key: key
           ports:
             - name: http
               containerPort: 3000
