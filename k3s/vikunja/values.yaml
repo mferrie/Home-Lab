@@ -1,0 +1,28 @@
+vikunja:
+  image:
+    repository: vikunja/vikunja
+    persistence:
+      data:
+        size: 5Gi
+        storageClass: longhorn-ssd
+      database:
+        size: 2Gi
+        storageClass: longhorn-ssd
+    ingress:
+      main:
+        enabled: true
+        ingressClassName: traefik
+        annotations:
+          traefik.ingress.kubernetes.io/router.entrypoints: websecure
+          cert-manager.io/cluster-issuer: letsencrypt-prod
+        hosts:
+          - host: vikunja.internal
+            paths:
+              - path: /
+        tls: []
+    configmaps:
+      config:
+        enabled: true
+        data:
+          config.yml: |
+            publicurl: "https://vikunja.internal"

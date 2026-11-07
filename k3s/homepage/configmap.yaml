@@ -163,6 +163,17 @@ data:
             href: http://joplin.internal
             description: Notes Manager
             siteMonitor: http://app.joplin.svc.cluster.local:22300
+        - Vikunja:
+	    icon: si-vikunja
+            href: http://vikunja.internal
+	    description: Task Organizer
+	    siteMonitor: http://app.vikunja.svc.cluster.local
+	    widget:
+              type: vikunja
+              url: http://vikunja.internal
+              key: '{{HOMEPAGE_VAR_VIKUNJA_KEY
+              enableTaskList: true
+              version: 2
   widgets.yaml: |
     - search:
         provider: custom
