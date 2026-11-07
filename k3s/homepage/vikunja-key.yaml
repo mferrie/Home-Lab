@@ -1,0 +1,13 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: vikunja-key
+  namespace: homepage
+spec:
+  encryptedData:
+    key: AgAlcSETftduxonYjnTBCFDmlatM34WXoR12TaWx8wfoSsslMSH7o0LY7dOzsIdCkSfMhEgtYj9Pw8BEfmetpAKtVoiKfz9AJL4UGG2hZj/8nWQVhLD0/8CdBkSod4ooOB7AiXFIJfjKHAYxhAlkUvQdGL3MyOCxlgeuxiU0Ke/5e4A7CjLev9/P8a2q1O5ZX8JUskyDbVncRA8vCBqBbb5MoxaqNOzCKBsQIIeL7ZGaX5o7ccK7v3iA20bz7zEbv+7aIBuBRmfgiAZINyq9FFHZkb/ySWBt7Y06yz/WVJKN8TicVfr1QheCG/Wm9BZ2eoGfLjatdrBNLqHfGtxpDz6U3xARmOjId4mX9MTVKRJYqxTLFStyQ0H9oQ70+s9c7oaHtloNiKumcPFC5Ze/2kkN4t8V1sLuF5k8ZUreHubrRlyhHMWKiSzCfMUIplOFimI0vVYxdzTowZ1RaP9bijolWqbOS9RjXtILY5JBoeJykiYMru63ZI0f6+s03AclJ4kOKFd/Tc+mnuWUiAC+TIOvKGblTh2AooGDulnc4xolh+xlVX9l661h5qpXvCI/t9XVMnxNXW+w3RexStsZ/ZF1L3R+gbd46Jvi1+VuEcyCi0PqZg3elC3FH8U40cIZhqWV5eaCtXoVTfVCzp2W9m3cKqFMXauqZs96fsBfdIFJamouEv4zMMDvscKFbZnB/w85+aVwv2HmkV3KW0vekl5Yf2fN6hZxZCujeaKBG3D4CL6KYj0SRUaCLxuF
+  template:
+    metadata:
+      name: vikunja-key
+      namespace: homepage
