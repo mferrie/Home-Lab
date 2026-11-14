@@ -1,7 +1,7 @@
-# Multi-Architecture K3s Edge Cluster & GitOps Infrastructure
+# Multi-Architecture k3s Edge Cluster & GitOps Infrastructure
 
 ## Project Overview
-A declarative, multi-architecture Kubernetes (K3s) cluster managing ~24 stateful and stateless services across a hybrid node pool (ARM64 edge devices and x86_64 compute). Designed for high resource density within a 25GB RAM footprint, leveraging automated GitOps pipelines, distributed persistent storage, and secure network-edge access control.
+A declarative, multi-architecture Kubernetes (k3s) cluster managing 14 stateful and stateless services across a hybrid node pool (ARM64 edge devices and x86_64 compute). Designed for high resource density within a 25GB RAM footprint, leveraging automated GitOps pipelines, distributed persistent storage, and secure network-edge access control.
 
 ## System Architecture & Technical Specifications
 
@@ -11,7 +11,7 @@ A declarative, multi-architecture Kubernetes (K3s) cluster managing ~24 stateful
   * 1x Raspberry Pi 3 (ARM64) - Edge Compute and Ingress Control
   * 1x Raspberry Pi 4 (ARM64) - Middleweight Compute and Distributed Storage Peer
 * **Storage Engine:** Longhorn (Distributed block storage with persistent volume replication)
-* **Continuous Delivery:** GitOps driven via Argo CD *(Migration to Flux scheduled)*
+* **Continuous Delivery:** GitOps driven via Argo CD
 * **Ingress & Networking:** Traefik Ingress Controller terminated via edge-routed WireGuard VPN, load balanced by MetalLB
 * **Resource Envelope:** 21 GB Total System Memory across node pools (Pi 3: 1 GB; Pi 4: 4 GB; Dell: 16 GB)
 
