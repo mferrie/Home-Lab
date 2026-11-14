@@ -5,7 +5,7 @@ A declarative, multi-architecture Kubernetes (k3s) cluster managing 14 stateful 
 
 ## System Architecture & Technical Specifications
 
-* **Orchestration:** K3s (Lightweight Kubernetes)
+* **Orchestration:** k3s (Lightweight Kubernetes)
 * **Compute Nodes:**
   * 1x Dell Latitude 7490 (x86_64 / AMD64) - Primary Compute / Control Plane & Storage
   * 1x Raspberry Pi 3 (ARM64) - Edge Compute and Ingress Control
@@ -19,7 +19,7 @@ A declarative, multi-architecture Kubernetes (k3s) cluster managing 14 stateful 
 
 * **Heterogeneous Node Scheduling:** Resolved architecture mismatches (ARM64 vs. AMD64) by enforcing multi-arch container image manifests and explicit node affinity and taint/toleration rules.
 * **Storage Isolation:** Excluded SD-card-bound nodes (Pi-3) from the Longhorn replica pool to increase storage bandwidth and mitigate storage degradation, offloading distributed storage strictly to wear-levelled media.
-* **Resource Optimization:** Managed container density (~24 active workloads) within a tightly constrained RAM ceiling using strict CPU/Memory request and limit allocations.
+* **Resource Optimization:** Managed container density (14 active workloads) within a tightly constrained RAM ceiling using strict CPU/Memory request and limit allocations.
 
 ## Operational Resilience & Post-Mortems
 
