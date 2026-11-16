@@ -1,0 +1,114 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nebula-sync
+  namespace: pihole
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nebula-sync
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: nebula-sync
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                      - amd64
+      tolerations:
+        - key: node-type
+          operator: Equal
+          value: compute-only
+          effect: NoSchedule
+      containers:
+        - name: nebula-sync
+          image: ghcr.io/lovelaze/nebula-sync:v0.11.3
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TZ
+              value: America/Chicago
+
+            - name: PIHOLE_API_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: pihole-webpassword
+                  key: FTLCONF_webserver_api_password
+
+            - name: PRIMARY
+              value: "http://pihole-web:80|$(PIHOLE_API_PASSWORD)"
+
+            - name: REPLICAS
+              value: "http://pihole2-web:80|$(PIHOLE_API_PASSWORD)"
+
+            - name: FULL_SYNC
+              value: "false"
+
+            - name: RUN_GRAVITY
+              value: "true"
+
+            - name: CRON
+              value: "*/15 * * * *"
+
+            - name: CLIENT_RETRY_DELAY_SECONDS
+              value: "15"
+
+            - name: CLIENT_TIMEOUT_SECONDS
+              value: "45"
+
+            # DNS configuration
+            - name: SYNC_CONFIG_DNS
+              value: "true"
+
+            - name: SYNC_CONFIG_DNS_EXCLUDE
+              value: "upstreams,interface,listeningMode,dnssec"
+
+            - name: SYNC_CONFIG_RESOLVER
+              value: "true"
+
+            # Gravity configuration
+            - name: SYNC_GRAVITY_GROUP
+              value: "true"
+
+            - name: SYNC_GRAVITY_AD_LIST
+              value: "true"
+
+            - name: SYNC_GRAVITY_AD_LIST_BY_GROUP
+              value: "true"
+
+            - name: SYNC_GRAVITY_DOMAIN_LIST
+              value: "true"
+
+            - name: SYNC_GRAVITY_DOMAIN_LIST_BY_GROUP
+              value: "true"
+
+            - name: SYNC_GRAVITY_CLIENT
+              value: "true"
+
+            - name: SYNC_GRAVITY_CLIENT_BY_GROUP
+              value: "true"
+
+            # Keep DHCP and other host-specific settings independent
+            - name: SYNC_CONFIG_DHCP
+              value: "false"
+
+            - name: SYNC_CONFIG_NTP
+              value: "false"
+
+            - name: SYNC_CONFIG_DATABASE
+              value: "false"
+
+            - name: SYNC_CONFIG_MISC
+              value: "false"
+
+            - name: SYNC_CONFIG_DEBUG
+              value: "false"

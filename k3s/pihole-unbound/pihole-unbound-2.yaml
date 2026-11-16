@@ -1,0 +1,156 @@
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pihole2-config
+  namespace: pihole
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn-ssd
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pihole2-dnsmasq
+  namespace: pihole
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn-ssd
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pihole2-unbound
+  namespace: pihole
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pihole2-unbound
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: pihole2-unbound
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/arch
+                    operator: In
+                    values:
+                      - arm64
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - pi-4
+      tolerations:
+        - key: node-type
+          operator: Equal
+          value: compute-only
+          effect: NoSchedule
+      containers:
+        - name: pihole-unbound
+          image: mpgirro/pihole-unbound:2026.10.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 53
+              protocol: TCP
+            - containerPort: 53
+              protocol: UDP
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: TZ
+              value: America/Chicago
+            - name: FTLCONF_webserver_api_password
+              valueFrom:
+                secretKeyRef:
+                  name: pihole-webpassword
+                  key: FTLCONF_webserver_api_password
+            - name: FTLCONF_dns_upstreams
+              value: 127.0.0.1#5335
+            - name: FTLCONF_dns_listeningMode
+              value: all
+            - name: FTLCONF_dns_dnssec
+              value: "true"
+            - name: FTLCONF_misc_etc_dnsmasq_d
+              value: "true"
+          volumeMounts:
+            - mountPath: /etc/pihole
+              name: pihole2-config
+            - mountPath: /etc/dnsmasq.d
+              name: pihole2-dnsmasq
+          livenessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 30
+            failureThreshold: 5
+          readinessProbe:
+            httpGet:
+              path: /admin
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          resources:
+            requests:
+              memory: 128Mi
+              cpu: 100m
+            limits:
+              memory: 512Mi
+              cpu: 500m
+      volumes:
+        - name: pihole2-config
+          persistentVolumeClaim:
+            claimName: pihole2-config
+        - name: pihole2-dnsmasq
+          persistentVolumeClaim:
+            claimName: pihole2-dnsmasq
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pihole2-dns
+  namespace: pihole
+  annotations:
+    metallb.io/loadBalancerIPs: 192.168.0.205
+spec:
+  type: LoadBalancer
+  selector:
+    app: pihole2-unbound
+  ports:
+    - name: dns-tcp
+      port: 53
+      targetPort: 53
+      protocol: TCP
+    - name: dns-udp
+      port: 53
+      targetPort: 53
+      protocol: UDP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pihole2-web
+  namespace: pihole
+spec:
+  type: ClusterIP
+  selector:
+    app: pihole2-unbound
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
