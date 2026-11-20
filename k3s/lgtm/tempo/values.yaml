@@ -8,9 +8,9 @@ tempo:
       memory: 4Gi
 
   memBallastSizeMbs: 1024
-  reportingEnabled: false
+  reportingEnabled: true
   metricsGenerator:
-    enabled: false
+    enabled: true
     remoteWriteUrl: "http://prometheus-server.lgtm.svc.cluster.local/api/v1/write"
 
 persistence:
