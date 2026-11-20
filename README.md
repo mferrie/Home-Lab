@@ -59,23 +59,23 @@ flowchart TB
     end
 
     MLB --> Traefik
-    Client -.->| DNS Queries | DNS
-    Traefik -->| HTTP/S Routing | AppsMain
-    Traefik -->| HTTP/S Routing | AppsEdge
-    Traefik -->| Dashboard Access | LGTM
+    Client -.->|DNS Queries| DNS
+    Traefik -->|HTTP/S Routing| AppsMain
+    Traefik -->|HTTP/S Routing| AppsEdge
+    Traefik -->|Dashboard Access| LGTM
 
-    Forgejo -->| Manifests & Helm Values | Control
-    Control -->| Declarative Sync | Pi3
-    Control -->| Declarative Sync | Dell
-    Control -->| Declarative Sync | Pi4
+    Forgejo -->|Manifests & Helm Values| Control
+    Control -->|Declarative Sync| Pi3
+    Control -->|Declarative Sync| Dell
+    Control -->|Declarative Sync| Pi4
 
-    AppsMain -->| PVC Read/Write | LH1
-    AppsEdge -->| PVC Read/Write | LH2
-    LH1 <-->| Block Replication<br/> (Pi 3 Excluded) | LH2
+    AppsMain -->|PVC Read/Write| LH1
+    AppsEdge -->|PVC Read/Write| LH2
+    LH1 <-->|"Block Replication<br/>(Pi 3 Excluded)"| LH2
 
-    LGTM -.->| Metrics, Logs & Traces | Pi3
-    LGTM -.->| Metrics, Logs & Traces | Dell
-    LGTM -.->| Metrics, Logs & Traces | Pi4
+    LGTM -.->|Metrics, Logs & Traces| Pi3
+    LGTM -.->|Metrics, Logs & Traces| Dell
+    LGTM -.->|Metrics, Logs & Traces| Pi4
 ```
 
 ## Engineering Constraints & Solutions
