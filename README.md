@@ -125,6 +125,8 @@ This environment hosts several solutions that I use daily. Below are selected in
 **Longhorn — Distributed Storage & Replica Scheduling**
 ![Longhorn](./Screenshots/Longhorn.png)
 
+</details>
+
 ### Utility Services
 <details>
 <summary><strong>Click to view hosted application & edge service screenshots (8 services)</strong></summary>
