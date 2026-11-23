@@ -109,6 +109,9 @@ This environment hosts several solutions that I use daily. Below are selected in
 ## Screenshots & Telemetry
 
 ### Core Infrastructure & Observability
+<details>
+<summary><strong>Click to view application screenshots (4 images)</strong></summary>
+<br>
 
 **Grafana — Node Resource Utilization (21 GB Envelope)**
 ![Grafana (Node mode)](./Screenshots/Grafana-Nodes.png)
@@ -122,6 +125,7 @@ This environment hosts several solutions that I use daily. Below are selected in
 **Longhorn — Distributed Storage & Replica Scheduling**
 ![Longhorn](./Screenshots/Longhorn.png)
 
+### Utility Services
 <details>
 <summary><strong>Click to view hosted application & edge service screenshots (8 services)</strong></summary>
 <br>
