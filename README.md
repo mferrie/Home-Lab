@@ -114,7 +114,7 @@ This environment hosts several solutions that I use daily. Below are selected in
 <br>
 
 **Grafana — Node Resource Utilization (21 GB Envelope)**
-![Grafana (Node mode)](./Screenshots/Grafana_Usage_Per_Node.png)
+![Grafana (Node mode)](./Screenshots/Grafana_Usage_per_Node.png)
 
 **Grafana — Namespace Workload Footprint**
 ![Grafana (Namespace mode)](./Screenshots/Grafana_Usage_Per_Namespace.png)
