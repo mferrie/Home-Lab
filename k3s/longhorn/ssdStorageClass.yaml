@@ -8,5 +8,5 @@ parameters:
   numberOfReplicas: "2"
   nodeSelector: "ssd"
   dataLocality: "disabled"
-reclaimPolicy: Retain
+reclaimPolicy: Delete
 volumeBindingMode: Immediate
