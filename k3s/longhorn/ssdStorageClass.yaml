@@ -3,9 +3,10 @@ kind: StorageClass
 metadata:
   name: longhorn-ssd
 provisioner: driver.longhorn.io
+allowVolumeExpansion: true
 parameters:
   numberOfReplicas: "2"
   nodeSelector: "ssd"
   dataLocality: "disabled"
-reclaimPolicy: Delete
+reclaimPolicy: Retain
 volumeBindingMode: Immediate
