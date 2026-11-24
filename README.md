@@ -1,7 +1,7 @@
 # Multi-Architecture k3s Edge Cluster & GitOps Infrastructure
 
 ## Project Overview
-A declarative, multi-architecture Kubernetes (k3s) cluster managing 14 stateful and stateless services across a hybrid node pool (ARM64 edge devices and x86_64 compute). Designed for high resource density within a 25GB RAM footprint, leveraging automated GitOps pipelines, distributed persistent storage, and secure network-edge access control.
+A declarative, multi-architecture Kubernetes (k3s) cluster managing 16 stateful and stateless services across a hybrid node pool (ARM64 edge devices and x86_64 compute). Designed for high resource density within a 25GB RAM footprint, leveraging automated GitOps pipelines, distributed persistent storage, and secure network-edge access control.
 
 ## Repository Structure
 
@@ -109,12 +109,15 @@ This environment hosts several solutions that I use daily. Below are selected in
 ## Screenshots & Telemetry
 
 ### Core Infrastructure & Observability
+<details>
+<summary><strong>Click to view application screenshots (4 images)</strong></summary>
+<br>
 
 **Grafana — Node Resource Utilization (21 GB Envelope)**
-![Grafana (Node mode)](./Screenshots/Grafana-Nodes.png)
+![Grafana (Node mode)](./Screenshots/Grafana_Usage_per_Node.png)
 
 **Grafana — Namespace Workload Footprint**
-![Grafana (Namespace mode)](./Screenshots/Grafana-Namespaces.png)
+![Grafana (Namespace mode)](./Screenshots/Grafana_Usage_Per_Namespace.png)
 
 **Argo CD — Declarative GitOps Application Topology**
 ![ArgoCD](./Screenshots/ArgoCD.png)
@@ -122,6 +125,9 @@ This environment hosts several solutions that I use daily. Below are selected in
 **Longhorn — Distributed Storage & Replica Scheduling**
 ![Longhorn](./Screenshots/Longhorn.png)
 
+</details>
+
+### Utility Services
 <details>
 <summary><strong>Click to view hosted application & edge service screenshots (8 services)</strong></summary>
 <br>
