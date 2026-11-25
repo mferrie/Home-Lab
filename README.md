@@ -1,7 +1,7 @@
 # Multi-Architecture k3s Edge Cluster & GitOps Infrastructure
 
 ## Project Overview
-A declarative, multi-architecture Kubernetes (k3s) cluster managing 16 stateful and stateless services across a hybrid node pool (ARM64 edge devices and x86_64 compute). Designed for high resource density within a 25GB RAM footprint, leveraging automated GitOps pipelines, distributed persistent storage, and secure network-edge access control.
+A declarative, multi-architecture Kubernetes (k3s) cluster managing 16 stateful and stateless services across a hybrid node pool (ARM64 edge devices and x86_64 compute). Designed for high resource density within a 21 GB RAM (16 GB + 4 GB + 1 GB) footprint, leveraging automated GitOps pipelines, distributed persistent storage, and secure network-edge access control.
 
 ## Repository Structure
 
@@ -81,8 +81,8 @@ flowchart TB
 ## Engineering Constraints & Solutions
 
 * **Heterogeneous Node Scheduling:** Resolved architecture mismatches (ARM64 vs. AMD64) by enforcing multi-arch container image manifests and explicit node affinity and taint/toleration rules.
-* **Storage Isolation:** Excluded SD-card-bound nodes (`pi-3`) from the Longhorn replica pool to increase storage bandwidth and mitigate storage degradation, offloading distributed storage strictly to wear-levelled media.
-* **Resource Optimization:** Managed container density (14 active workloads) within a tightly constrained RAM ceiling using strict CPU/Memory request and limit allocations.
+* **Storage Isolation:** Excluded SD-card-bound nodes (`pi-3`) from the Longhorn replica pool to increase storage bandwidth and mitigate storage degradation, offloading distributed storage exclusively to wear-levelled media.
+* **Resource Optimization:** Managed container density (16 active workloads) within a tightly constrained RAM ceiling using strict CPU/Memory request and limit allocations.
 
 ## Operational Resilience & Post-Mortems
 
@@ -113,16 +113,16 @@ This environment hosts several solutions that I use daily. Below are selected in
 <summary><strong>Click to view application screenshots (4 images)</strong></summary>
 <br>
 
-**Grafana — Node Resource Utilization (21 GB Envelope)**
-![Grafana (Node mode)](./Screenshots/Grafana_Usage_per_Node.png)
+**Grafana - Node Resource Utilization Monitoring (21 GB Envelope)**
+![Grafana (Resources by Node)](./Screenshots/Grafana_Usage_per_Node.png)
 
-**Grafana — Namespace Workload Footprint**
-![Grafana (Namespace mode)](./Screenshots/Grafana_Usage_Per_Namespace.png)
+**Grafana - Namespace Resource Utilization Monitoring**
+![Grafana (Resources by Namespace)](./Screenshots/Grafana_Usage_Per_Namespace.png)
 
-**Argo CD — Declarative GitOps Application Topology**
+**Argo CD - Declarative GitOps Platform**
 ![ArgoCD](./Screenshots/ArgoCD.png)
 
-**Longhorn — Distributed Storage & Replica Scheduling**
+**Longhorn - Distributed Storage & Replica Scheduling**
 ![Longhorn](./Screenshots/Longhorn.png)
 
 </details>
